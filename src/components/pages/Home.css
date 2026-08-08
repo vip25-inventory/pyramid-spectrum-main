@@ -1,0 +1,1993 @@
+/* Base styles for home page */
+.home-page {
+  padding: 0;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Specific selector for paragraph text in Home page */
+html body .home-page p {
+  color: #494A4A;
+}
+
+.home-page .container {
+  max-width: 1200px;
+  padding: 20px;
+}
+
+/* Scholarship Banner */
+.scholarship-banner {
+  /* background-color: #009688; */
+  background-color: #2a50a2;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  overflow: hidden; /* Hide overflow for marquee effect */
+}
+
+.scholarship-banner .container {
+  padding: 0;
+  overflow: hidden; /* Ensure overflow is hidden */
+  width: 100%;
+  max-width: 100%; /* Override container max-width for full width scrolling */
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  white-space: nowrap; /* Force single line across all screen sizes */
+  width: max-content; /* Let content determine width */
+  animation: banner-scroll 15s linear infinite;
+  flex-wrap: nowrap; /* Prevent wrapping on all screen sizes */
+  flex-direction: row; /* Keep in row direction on all screen sizes */
+}
+
+@keyframes banner-scroll {
+  0% {
+    transform: translateX(100vw); /* Start from right edge of viewport */
+  }
+  100% {
+    transform: translateX(-100%); /* End past the left edge based on content width */
+  }
+}
+
+.banner-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.banner-highlight {
+  font-weight: 600;
+}
+
+/* Mobile banner adjustments */
+@media (max-width: 576px) {
+  .banner-content {
+    flex-wrap: nowrap; /* Override any flex-wrap from elsewhere */
+    flex-direction: row; /* Override column direction */
+    font-size: 14px; /* Slightly smaller text */
+    white-space: nowrap; /* Force single line */
+  }
+  
+  .banner-icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .contact-us-btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+}
+
+/* Scholarship Hero Section */
+.scholarship-hero {
+  background-color: #f8f9fa;
+  padding: 40px 0;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+}
+
+.scholarship-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.scholarship-subtitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.scholarship-tabs {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.scholarship-animated-btn.button {
+  background-color: #2a50a2;
+  border: 1px solid #2a50a2;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.scholarship-animated-btn-online:hover {
+  background-color: #1a3b8f !important; 
+  border-color: #1a3b8f !important;
+}
+
+.scholarship-animated-btn.button:hover {
+  background-color: #1a3b8f;
+  border-color: #1a3b8f;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.scholarship-animated-btn.button.active {
+  background-color: #2a50a2;
+  color: white;
+  border-color: #2a50a2;
+  box-shadow: 0 4px 8px rgba(42, 80, 162, 0.3);
+}
+
+.scholarship-animated-btn.button + .button--bubble__effect-container .circle {
+  background: #2a50a2;
+}
+
+.scholarship-animated-btn.button + .button--bubble__effect-container .button {
+  background: #2a50a2;
+  border-radius: 6px;
+}
+
+.scholarship-animated-btn.button--bubble:hover + .button--bubble__effect-container .circle {
+  background: #1a3b8f;
+}
+
+.scholarship-animated-btn.button--bubble:hover + .button--bubble__effect-container .button {
+  background: #1a3b8f;
+}
+
+/* Fix spacing in scholarship tabs for AnimatedButtons */
+.scholarship-tabs .animated-button-container {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 576px) {
+  .scholarship-tabs {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .scholarship-tabs .animated-button-container {
+    width: 100%;
+  }
+}
+
+.scholarship-carousel {
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 0; /* Add margin-bottom to 0 since indicators are now below */
+}
+
+.scholarship-slide {
+  position: relative;
+  height: 320px;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+.scholarship-slide-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.scholarship-slide-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.scholarship-slide-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.scholarship-slide-content h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+/* Custom carousel indicators */
+.scholarship-carousel-indicators {
+  position: relative;
+  text-align: center;
+  margin-top: 15px;
+  z-index: 10;
+}
+
+.scholarship-carousel-indicators ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 8px;
+}
+
+.scholarship-carousel-indicators li {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(42, 80, 162, 0.3);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scholarship-carousel-indicators li.active {
+  background-color: #2a50a2;
+  transform: scale(1.2);
+}
+
+/* Hero Section */
+.hero {
+  background-color: white;
+  padding: 60px 0;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.hero h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin-bottom: 30px;
+}
+
+.contact-us-btn {
+  margin-bottom: 20px;
+  padding: 10px 25px;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0 4px 8px rgba(42, 80, 162, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  background-color: white;
+  color: #2a50a2;
+  border-color: #2a50a2;
+}
+
+.contact-us-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(42, 80, 162, 0.3);
+  background-color: #2a50a2;
+  color: white;
+}
+
+.hero-buttons .btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.hero-tabs {
+  background: linear-gradient(135deg, #f0f4ff 0%, #e8eaf6 100%);
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  padding: 25px;
+  transition: box-shadow 0.3s ease;
+}
+
+.hero-tabs:hover {
+  box-shadow: 0 12px 40px rgba(42, 80, 162, 0.2);
+}
+
+.tabs-header {
+  display: flex;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+}
+
+/* Specific selector for tab buttons in the hero section */
+html body .home-page .hero-tabs .tabs-header .tab-btn {
+  font-weight: 800;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #777;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.tab-btn.active {
+  color: #2a50a2;
+  border-bottom: 2px solid #2a50a2;
+}
+
+/* Tab Content */
+.tab-content {
+  display: none;
+  opacity: 0;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+.tab-content.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Slide Animation for Tab Content */
+.tab-content.slide-left {
+  animation: slideFromRight 0.5s forwards;
+}
+
+.tab-content.slide-right {
+  animation: slideFromLeft 0.5s forwards;
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.tab-content h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.course-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Course carousel styles */
+.course-carousel {
+  position: relative;
+  padding: 0 40px; /* Add padding for the arrows */
+}
+
+.course-carousel .course-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  background-color: rgba(42, 80, 162, 0.9);
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.85;
+  z-index: 5;
+  transition: all 0.3s ease;
+}
+
+.course-carousel .carousel-control-prev {
+  left: -15px;
+}
+
+.course-carousel .carousel-control-next {
+  right: -15px;
+}
+
+.course-carousel .course-control:hover {
+  background-color: rgba(42, 80, 162, 1);
+  opacity: 1;
+}
+
+.course-carousel .carousel-control-prev-icon,
+.course-carousel .carousel-control-next-icon {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 576px) {
+  .course-carousel {
+    padding: 0 30px; /* Smaller padding on mobile */
+  }
+  
+  .course-carousel .course-control {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .course-carousel .carousel-control-prev-icon,
+  .course-carousel .carousel-control-next-icon {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.course-option {
+  flex: 1;
+  min-width: 80px;
+  text-align: center;
+  padding: 15px;
+  background-color: white;
+  border-radius: 6px;
+  border-top: 5px solid #2a50a2;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+}
+
+.course-option:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.course-option h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Course Option Buttons */
+.course-option .btn-outline-primary {
+  background-color: white;
+  color: #2a50a2;
+  border-color: #2a50a2;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.course-option .btn-outline-primary:hover {
+  background-color: #2a50a2;
+  color: white;
+  border-color: #2a50a2;
+}
+
+/* Home page specific text colors */
+.home-page .text-primary {
+  color: #2a50a2;
+}
+
+/* Button styles for home page */
+.home-page .btn-primary {
+  background-color: #2a50a2;
+  border-color: #2a50a2;
+  color: white;
+  padding: 8px 24px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.home-page .btn-primary:hover {
+  background-color: #1a3b8f;
+  border-color: #1a3b8f;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.home-page .btn-outline-primary {
+  border-color: #2a50a2;
+  color: #2a50a2;
+  font-weight: 500;
+}
+
+.home-page .btn-outline-primary:hover {
+  background-color: white;
+  color: #2a50a2;
+  border-color: #2a50a2;
+}
+
+/* Specific override for course option buttons to prevent any conflicts */
+html body .home-page .course-option .btn-outline-primary {
+  background-color: white;
+  color: #2a50a2;
+  border-color: #2a50a2;
+}
+
+html body .home-page .course-option .btn-outline-primary:hover {
+  background-color: #2a50a2;
+  color: white;
+  border-color: #2a50a2;
+}
+
+/* Section Styles */
+.section {
+  margin-bottom: 1.5rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  position: relative;
+}
+
+/* Override for Why SPECTRUM section */
+.home-page .why-spectrum.section {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* Override for FAQ section */
+.home-page .faq.section {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* Override for Admissions section */
+.home-page .admissions-section.section {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* Override for Parent's trusted partner section - imported from AboutPage */
+.home-page .parents-partner.section {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* Override for Success is a journey section - imported from AboutPage */
+.home-page .success-journey.section {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.section-title {
+  color: #2a50a2;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+/* Why SPECTRUM Section */
+.why-spectrum {
+  margin-bottom: 1.5rem;
+}
+
+.feature-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 25px 20px;
+  text-align: center;
+  height: 100%;
+  transition: transform 0.3s, box-shadow 0.3s, border-top 0.3s;
+  border-top: 5px solid transparent;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(42, 80, 162, 0.2);
+  border-top: 5px solid #2a50a2;
+  background-image: url('../../../public/images/vector.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: soft-light;
+  background-color: rgba(255, 255, 255, 0.5); /* Lower opacity to make the background image more visible */
+}
+
+.feature-icon {
+  font-size: 2rem;
+  color: #2a50a2;
+  margin-bottom: 20px;
+}
+
+/* Specific selector for feature icons in Why SPECTRUM section */
+.home-page .why-spectrum .feature-card .feature-icon i {
+  color: #2a50a2;
+}
+
+.feature-card h3 {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+/* Trending Section */
+.trending-section {
+  margin-bottom: 1.5rem;
+}
+
+.trending-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 25px;
+  height: 100%;
+}
+
+.trending-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2a50a2;
+  margin-bottom: 20px;
+}
+
+.trending-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.trending-list li {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
+
+.trending-list li a {
+  color: #2a50a2;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  transition: all 0.3s;
+}
+
+.trending-list li a:hover {
+  color: #2a50a2;
+}
+
+.trending-list li a span {
+  color: #2a50a2;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.champions-section {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 25px;
+  height: 100%;
+}
+
+.champions-section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2a50a2;
+  margin-bottom: 20px;
+}
+
+.champion-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.champion-img {
+  flex: 0 0 80px;
+  margin-right: 15px;
+}
+
+.champion-img img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.champion-info {
+  flex: 1;
+}
+
+.champion-info h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* App Advantage Section */
+.app-advantage {
+  background-color: #f0f4ff;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.advantage-card {
+  text-align: center;
+  padding: 25px 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.advantage-icon {
+  font-size: 2rem;
+  color: #2a50a2;
+  margin-bottom: 20px;
+}
+
+.advantage-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.advantage-card p {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+/* Testimonials Section */
+.testimonials {
+  background-color: #f9f9f9;
+  padding: 60px 0;
+  margin-bottom: 30px;
+}
+
+.testimonials .section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #333;
+  position: relative;
+}
+
+.testimonial-carousel {
+  position: relative;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* Smooth scroll animation for testimonial carousel */
+.smooth-carousel .carousel-inner {
+  transition: transform 0.8s cubic-bezier(0.4, 0.0, 0.2, 1);
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+.smooth-carousel .carousel-item {
+  transition: transform 0.8s cubic-bezier(0.4, 0.0, 0.2, 1);
+  backface-visibility: hidden;
+}
+
+.smooth-carousel .carousel-control-prev,
+.smooth-carousel .carousel-control-next {
+  transition: all 0.3s ease;
+}
+
+/* Add subtle shadow during transition */
+.smooth-carousel .carousel-item-next:not(.carousel-item-start),
+.smooth-carousel .carousel-item-prev:not(.carousel-item-end) {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Optimize performance */
+.smooth-carousel * {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.testimonial-row {
+  margin: 0 -8px;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  height: 100%;
+  transition: all 0.3s ease;
+  position: relative;
+  margin: 0 8px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-content {
+  margin-bottom: 20px;
+  position: relative;
+  padding-top: 20px;
+  flex: 1;
+}
+
+.quote-icon {
+  font-size: 1.3rem;
+  color: #ddd;
+  opacity: 0.7;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 0;
+  transition: all 0.3s;
+}
+
+.testimonial-card:hover .quote-icon {
+  transform: translateY(-3px);
+  color: #2a50a2;
+  opacity: 0.8;
+}
+
+.testimonial-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+  font-style: italic;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.author-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #f0f0f0;
+}
+
+.author-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.author-info h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 5px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.author-info p {
+  font-size: 14px;
+  color: #2a50a2;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+/* Make the carousel controls more visible */
+.testimonial-carousel .carousel-control-prev,
+.testimonial-carousel .carousel-control-next {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(92, 107, 192, 0.8);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.8;
+}
+
+.testimonial-carousel .carousel-control-prev {
+  left: -50px;
+}
+
+.testimonial-carousel .carousel-control-next {
+  right: -50px;
+}
+
+.testimonial-carousel .carousel-control-prev:hover,
+.testimonial-carousel .carousel-control-next:hover {
+  opacity: 1;
+  background-color: rgba(92, 107, 192, 1);
+}
+
+.testimonial-carousel .carousel-indicators {
+  bottom: -25px;
+}
+
+.testimonial-carousel .carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  opacity: 0.5;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+
+.testimonial-carousel .carousel-indicators .active {
+  background-color: #2a50a2;
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .testimonial-card {
+    padding: 20px;
+  }
+  
+  .testimonial-content p {
+    font-size: 15px;
+  }
+  
+  .testimonial-carousel .carousel-control-prev,
+  .testimonial-carousel .carousel-control-next {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .testimonial-carousel .carousel-control-prev {
+    left: -35px;
+  }
+  
+  .testimonial-carousel .carousel-control-next {
+    right: -35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 40px 0;
+  }
+  
+  .testimonial-card {
+    padding: 15px;
+    margin-bottom: 30px;
+    min-height: 300px;
+  }
+  
+  .testimonial-content p {
+    font-size: 14px;
+  }
+  
+  .author-img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .author-info h4 {
+    font-size: 14px;
+  }
+  
+  .author-info p {
+    font-size: 12px;
+  }
+  
+  .testimonial-carousel .carousel-control-prev {
+    left: -10px;
+  }
+  
+  .testimonial-carousel .carousel-control-next {
+    right: -10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .testimonials .section-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .testimonial-card {
+    padding: 15px;
+    min-height: 280px;
+  }
+  
+  .quote-icon {
+    font-size: 20px;
+  }
+  
+  .testimonial-content p {
+    font-size: 14px;
+  }
+  
+  .testimonial-author {
+    gap: 10px;
+  }
+  
+  .author-img {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .author-info h4 {
+    font-size: 13px;
+  }
+  
+  .author-info p {
+    font-size: 11px;
+  }
+  
+  .testimonial-carousel .carousel-control-prev,
+  .testimonial-carousel .carousel-control-next {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* Form Sections */
+.contact-form-section, .scholarship-form-section {
+  background-color: white;
+}
+
+.contact-form-wrapper {
+  padding: 30px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e8eaf6 100%);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #2a50a2;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.form-control {
+  padding: 14px 16px;
+  border: 1px solid rgba(92, 107, 192, 0.2);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #2a50a2;
+}
+
+.form-control::placeholder {
+  color: #9da3b3;
+  font-size: 0.95rem;
+}
+
+.form-check-label {
+  font-size: 0.9rem;
+  color: #555;
+  margin-left: 5px;
+}
+
+.form-check-input {
+  width: 18px;
+  height: 18px;
+  border-color: rgba(92, 107, 192, 0.3);
+}
+
+.form-check-input:checked {
+  background-color: #2a50a2;
+  border-color: #2a50a2;
+}
+
+.scholarship-form .btn-primary {
+  background-color: #2a50a2;
+  border-color: #2a50a2;
+  font-weight: 500;
+  padding: 10px 24px;
+}
+
+html body .home-page .btn-primary,
+html body .btn-primary.home-page-btn {
+  background-color: #2a50a2;
+  border-color: #2a50a2;
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+}
+
+html body .home-page .btn-primary:hover,
+html body .btn-primary.home-page-btn:hover {
+  background-color: #2a3070;
+  border-color: #2a3070;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+html body .home-page .btn-outline-primary,
+html body .btn-outline-primary.home-page-btn {
+  color: #2a50a2;
+  border-color: #2a50a2;
+}
+
+html body .home-page .btn-outline-primary:hover,
+html body .btn-outline-primary.home-page-btn:hover {
+  background-color: #2a3070;
+  color: white;
+}
+
+/* Scholarship Form Section */
+.scholarship-form-section {
+  padding: 1.5rem;
+}
+
+.form-wrapper {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.scholarship-form .form-label {
+  font-weight: 500;
+  color: #555;
+}
+
+.scholarship-form .form-control,
+.scholarship-form .form-select {
+  padding: 12px;
+  border-color: #ddd;
+  font-size: 14px;
+}
+
+.scholarship-form .form-control:focus,
+.scholarship-form .form-select:focus {
+  box-shadow: none;
+  border-color: #2a50a2;
+}
+
+.scholarship-form .form-check-input:checked {
+  background-color: #2a50a2;
+  border-color: #2a50a2;
+}
+
+.scholarship-form .btn-primary {
+  background-color: #2a50a2;
+  border-color: #2a50a2;
+  font-weight: 500;
+  padding: 10px 24px;
+}
+
+.btn-primary {
+  background-color: #2a50a2;
+  border-color: #2a50a2;
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+}
+
+.btn-primary:hover {
+  background-color: #2a3070;
+  border-color: #2a3070;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline-primary {
+  color: #2a50a2;
+  border-color: #2a50a2;
+}
+
+.btn-outline-primary:hover {
+  background-color: #2a3070;
+  color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 1199px) {
+  .champion-img {
+    flex: 0 0 60px;
+  }
+}
+
+@media (max-width: 992px) {
+  .feature-card,
+  .trending-card,
+  .advantage-card,
+  .testimonial-card {
+    margin-bottom: 20px;
+  }
+
+  .hero-tabs {
+    margin-top: 30px;
+  }
+
+  .champion-card {
+    margin-bottom: 15px;
+  }
+
+  .scholarship-title {
+    font-size: 1.9rem;
+  }
+  
+  .scholarship-slide {
+    height: 280px;
+    padding: 0 15px;
+  }
+  
+  .scholarship-slide-content h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 0;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-tabs {
+    padding: 20px;
+  }
+
+  .why-spectrum,
+  .trending-section,
+  .testimonials,
+  .scholarship-form-section,
+  .contact-form-section {
+    margin-bottom: 1rem;
+  }
+
+  .app-advantage {
+    padding: 1.5rem;
+  }
+
+  .form-wrapper {
+    padding: 20px;
+  }
+
+  .scholarship-form .btn-primary {
+    padding: 8px;
+  }
+
+  .tab-btn {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .tab-content h3 {
+    font-size: 16px;
+  }
+
+  .course-option h4 {
+    font-size: 14px;
+  }
+
+  .course-options {
+    gap: 10px;
+  }
+
+  .testimonials {
+    margin-bottom: 2rem;
+    padding: 1.5rem 0;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .testimonial-card {
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+  
+  .testimonial-content {
+    padding-left: 1.5rem;
+  }
+  
+  .quote-icon {
+    font-size: 24px;
+  }
+  
+  .testimonial-content p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 30px;
+    height: 30px;
+  }
+
+  .scholarship-hero {
+    padding: 30px 0;
+  }
+  
+  .scholarship-title {
+    font-size: 1.7rem;
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+  
+  .scholarship-tabs-container {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .scholarship-slide {
+    height: 250px;
+    padding: 0 10px;
+  }
+  
+  .scholarship-carousel-indicators {
+    margin-top: 10px;
+  }
+  
+  .scholarship-carousel-indicators li {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding: 30px 0;
+  }
+  
+  .hero h1 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero-buttons .btn {
+    width: 100%;
+    padding: 8px 15px;
+  }
+  
+  .hero-tabs {
+    padding: 15px;
+  }
+  
+  .tabs-header {
+    flex-direction: column;
+  }
+  
+  .tab-btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .tab-content h3 {
+    font-size: 1.1rem;
+  }
+  
+  .course-option {
+    flex: 0 0 100%;
+  }
+  
+  .feature-card,
+  .trending-card,
+  .advantage-card,
+  .course-option {
+    margin-bottom: 15px;
+  }
+  
+  .champion-card {
+    margin-bottom: 20px;
+  }
+  
+  .champion-img {
+    height: 180px;
+  }
+  
+  /* Banner content styles for small screens */
+  .banner-content {
+    flex-wrap: nowrap; /* Override any flex-wrap from elsewhere */
+    flex-direction: row; /* Override column direction */
+    font-size: 14px; /* Slightly smaller text */
+    white-space: nowrap; /* Force single line */
+  }
+  
+  .scholarship-title {
+    font-size: 1.4rem;
+    line-height: 1.3;
+    margin-bottom: 15px;
+  }
+  
+  .scholarship-tabs {
+    flex-direction: column;
+  }
+  
+  .scholarship-slide {
+    height: 200px;
+  }
+  
+  .scholarship-carousel-indicators {
+    margin-top: 8px;
+  }
+  
+  .scholarship-carousel-indicators li {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .course-options {
+    flex-direction: column;
+  }
+
+  .course-option {
+    margin-bottom: 10px;
+  }
+}
+
+/* Multi-card container styling */
+.multi-card-container {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0 -10px;
+}
+
+.multi-card-container .testimonial-card {
+  flex: 0 0 calc(33.333% - 20px);
+  margin: 0 10px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-content {
+  flex: 1;
+  padding: 20px;
+  position: relative;
+}
+
+.testimonial-author {
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.stories-container {
+  margin-top: 30px;
+}
+
+.stories-container .testimonial-card {
+  margin-bottom: 30px;
+}
+
+.carousel-item .multi-card-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .multi-card-container {
+    margin: 0 -8px;
+  }
+  
+  .champion-img {
+    height: 220px;
+  }
+  
+  .multi-card-container .testimonial-card {
+    flex: 0 0 calc(33.333% - 16px);
+    margin: 0 8px 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  .multi-card-container {
+    margin: 0 -6px;
+  }
+  
+  .feature-card,
+  .trending-card,
+  .advantage-card,
+  .course-option {
+    margin-bottom: 20px;
+  }
+  
+  .hero-tabs {
+    margin-top: 30px;
+  }
+  
+  .champion-card {
+    margin-bottom: 30px;
+  }
+  
+  .scholarship-title {
+    font-size: 2rem;
+  }
+  
+  .scholarship-slide {
+    height: 300px;
+  }
+  
+  .multi-card-container .testimonial-card {
+    flex: 0 0 calc(50% - 12px);
+    margin: 0 6px 12px;
+  }
+  
+  .stories-container .testimonial-card {
+    flex: 0 0 calc(50% - 12px);
+  }
+}
+
+@media (max-width: 768px) {
+  .multi-card-container {
+    flex-direction: column;
+    margin: 0;
+  }
+  
+  .hero {
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero-tabs {
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .why-spectrum,
+  .trending-section,
+  .champions-section,
+  .testimonials,
+  .contact-form-section {
+    padding: 40px 0;
+  }
+  
+  .app-advantage {
+    padding-bottom: 40px;
+  }
+  
+  .form-wrapper {
+    padding: 20px;
+  }
+  
+  .scholarship-form .btn-primary {
+    width: 100%;
+  }
+  
+  .tab-btn {
+    padding: 10px 15px;
+  }
+  
+  .tab-content h3 {
+    font-size: 1.3rem;
+  }
+  
+  .course-option h4 {
+    font-size: 1.2rem;
+  }
+  
+  .course-options {
+    flex-wrap: wrap;
+  }
+  
+  .testimonials {
+    padding-bottom: 70px;
+  }
+  
+  .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+  }
+  
+  .multi-card-container .testimonial-card {
+    flex: 0 0 100%;
+    margin: 0 0 15px;
+  }
+  
+  .stories-container .testimonial-card {
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+  }
+  
+  .multi-card-container .testimonial-card:not(:first-child) {
+    display: none;
+  }
+  
+  .scholarship-hero {
+    padding: 30px 0;
+  }
+  
+  .scholarship-title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  
+  .scholarship-tabs-container {
+    text-align: center;
+  }
+  
+  .scholarship-slide {
+    height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding: 30px 0;
+  }
+  
+  .hero h1 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero-buttons .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .hero-tabs {
+    padding: 15px;
+  }
+  
+  .tabs-header {
+    flex-direction: column;
+  }
+  
+  .tab-btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .tab-content h3 {
+    font-size: 1.1rem;
+  }
+  
+  .course-option {
+    flex: 0 0 100%;
+  }
+  
+  .feature-card,
+  .trending-card,
+  .advantage-card,
+  .course-option {
+    margin-bottom: 15px;
+  }
+  
+  .champion-card {
+    margin-bottom: 20px;
+  }
+  
+  .champion-img {
+    height: 180px;
+  }
+  
+  /* Banner content styles for small screens */
+  .banner-content {
+    flex-wrap: nowrap; /* Override any flex-wrap from elsewhere */
+    flex-direction: row; /* Override column direction */
+    font-size: 14px; /* Slightly smaller text */
+    white-space: nowrap; /* Force single line */
+  }
+  
+  .scholarship-title {
+    font-size: 1.4rem;
+    line-height: 1.3;
+    margin-bottom: 15px;
+  }
+  
+  .scholarship-tabs {
+    flex-direction: column;
+  }
+  
+  .scholarship-slide {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .scholarship-title {
+    font-size: 1.2rem;
+    line-height: 1.3;
+  }
+}
+
+/* FAQ Section */
+.faq {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+  margin-bottom: 1.5rem;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 40px auto 0;
+}
+
+.faq-item {
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.faq-item.active {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transform: translateY(0);
+}
+
+.faq-question {
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background-color: #ffffff;
+  transition: background-color 0.3s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+.faq-item.active .faq-question {
+  background: linear-gradient(135deg, #f0f4ff 0%, #e8eaf6 100%);
+}
+
+.faq-question:hover {
+  background: linear-gradient(135deg, #f8faff 0%, #f0f2fa 100%);
+}
+
+.faq-item.active .faq-question:hover {
+  background: linear-gradient(135deg, #e8edff 0%, #e0e4f6 100%);
+}
+
+.faq-question h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.faq-question:hover h3 {
+  color: #2a50a2;
+}
+
+.faq-toggle {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2a50a2;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-toggle {
+  /* Remove the upward movement for a more subtle effect */
+  transform: translateY(0);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease-in-out,
+              padding 0.3s ease-in-out,
+              opacity 0.25s ease-in-out;
+  padding: 0 25px;
+}
+
+.faq-answer.open {
+  max-height: 1000px;
+  opacity: 1;
+  padding: 10px 25px 20px;
+}
+
+.faq-answer p {
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Mobile responsiveness for FAQ */
+@media (max-width: 768px) {
+  .faq {
+    padding: 40px 0;
+  }
+  
+  .faq-container {
+    padding: 0 15px;
+  }
+  
+  .faq-question h3 {
+    font-size: 1rem;
+  }
+  
+  .faq-answer p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .faq {
+    padding: 30px 0;
+  }
+  
+  .faq-question {
+    padding: 15px 20px;
+  }
+  
+  .faq-question h3 {
+    font-size: 0.95rem;
+  }
+  
+  .faq-answer.open {
+    padding: 0 20px 15px;
+  }
+}
+
+/* Custom text color styling for specific elements */
+/* 1. Color for "SPECTRUM" in scholarship title */
+.home-page .scholarship-title span.highlight-spectrum {
+  color: #2a50a2;
+}
+
+/* 2. Color for "admissions" and "course details" in hero section */
+.home-page .hero h1 span.highlight-text {
+  color: #2a50a2;
+}
+
+/* 3. Color for "why" and "Online" in Why SPECTRUM Online section */
+.home-page .section-title span.normal-text {
+  color: #000;
+}
+
+.home-page .section-title span.spectrum-text {
+  color: #2a50a2;
+}
+
+/* 4. Color for "Testimonials" in testimonials section */
+.home-page .testimonials .section-title span.highlight-testimonials {
+  color: #2a50a2;
+}
+
+/* 5. Custom styling for "FAQ" in FAQ section title */
+.home-page .faq .section-title span.faq-letter {
+  color: #2a50a2;
+}
+
+.home-page .faq .section-title span.faq-text {
+  color: #000;
+}
+
+/* Testimonial Author section styling */
+.home-page .section.testimonials .testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #f0f0f0;
+  border-left: 5px solid #2a50a2;
+  padding-left: 15px; /* Add some padding so content isn't right against the border */
+}
+
+/* AnimatedButton styles for hero section */
+.contact-us-animated-btn.button {
+  /* margin-top: 10px; */
+  background-color: #2a50a2;
+  font-size: 16px;
+  padding: 10px 25px;
+  font-weight: 500;
+  box-shadow: 0 4px 8px rgba(42, 80, 162, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.contact-us-animated-btn.button:hover {
+  background-color: #2a3070;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(42, 80, 162, 0.3);
+}
+
+.contact-us-animated-btn.button + .button--bubble__effect-container .circle {
+  background: #2a50a2;
+}
+
+.contact-us-animated-btn.button + .button--bubble__effect-container .button {
+  background: #2a50a2;
+  border-radius: 6px;
+}
+
+.contact-us-animated-btn.button--bubble:hover + .button--bubble__effect-container .circle {
+  background: #2a3070;
+}
+
+.contact-us-animated-btn.button--bubble:hover + .button--bubble__effect-container .button {
+  background: #2a3070;
+}
+
+.animated-button-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .animated-button-container {
+    margin-bottom: 25px;
+    width: 100%;
+  }
+  
+  .contact-us-animated-btn.button {
+    width: 100%;
+  }
+}

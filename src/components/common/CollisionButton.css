@@ -1,0 +1,102 @@
+:root {
+  --btn-width: 150px;
+  --btn-height: 40px;
+  --btn-color: #2a3070; /* Deep blue/indigo color */
+}
+
+.btn-collision {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: var(--btn-height);
+  max-width: var(--btn-width);
+  margin: 1rem auto;
+  /* text-transform: uppercase; */
+  border: 1px solid currentColor;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-decoration: none;
+  line-height: var(--btn-height);
+  color: var(--btn-color);
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* The text span needs to be above the pseudo-elements */
+.btn-collision span {
+  position: relative;
+  z-index: 1; /* This ensures text stays above the animations */
+  display: block;
+  text-align: center;
+  transition: color 0.5s;
+}
+
+.btn-collision:before,
+.btn-collision:after {
+  position: absolute;
+  top: 50%;
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: var(--btn-color);
+  border-radius: 50%;
+  z-index: 0; /* Ensure these stay below the text */
+}
+
+.btn-collision:before {
+  left: -20px;
+  transform: translate(-50%, -50%);
+}
+
+.btn-collision:after {
+  right: -20px;
+  transform: translate(50%, -50%);
+}
+
+.btn-collision:hover span {
+  color: #ffffff; /* Explicitly set the text to white on hover */
+  transition-delay: 0.4s;
+}
+
+.btn-collision:hover:before {
+  animation: criss-cross-left 0.8s both;
+  animation-direction: alternate;
+}
+
+.btn-collision:hover:after {
+  animation: criss-cross-right 0.8s both;
+  animation-direction: alternate;
+}
+
+@keyframes criss-cross-left {
+  0% {
+    left: -20px;
+  }
+  50% {
+    left: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    left: 50%;
+    width: calc(var(--btn-width) * 1.5);
+    height: calc(var(--btn-width) * 1.5);
+  }
+}
+
+@keyframes criss-cross-right {
+  0% {
+    right: -20px;
+  }
+  50% {
+    right: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    right: 50%;
+    width: calc(var(--btn-width) * 1.5);
+    height: calc(var(--btn-width) * 1.5);
+  }
+} 

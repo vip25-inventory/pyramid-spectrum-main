@@ -1,0 +1,119 @@
+/* Navbar Animation Styles */
+.menu-item > a {
+  position: relative;
+  text-decoration: none;
+}
+
+.menu-item > a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.menu-item > a:hover::after,
+.menu-item:hover > a::after,
+.menu-item.active > a::after {
+  width: 100%;
+}
+
+/* Submenu animations */
+.submenu {
+  transform: translateY(10px);
+  transition: all 0.3s ease, transform 0.3s ease;
+}
+
+.has-submenu:hover .submenu {
+  transform: translateY(0);
+}
+
+.submenu-item {
+  transition: background-color 0.2s;
+}
+
+.submenu-item > a i {
+  transition: transform 0.2s ease;
+}
+
+.submenu-item:hover > a i {
+  transform: translateX(3px);
+}
+
+.submenu-dropdown {
+  transform: translateX(10px);
+  transition: all 0.3s ease, transform 0.3s ease;
+}
+
+.submenu-item:hover .submenu-dropdown {
+  transform: translateX(0);
+}
+
+/* Submenu links */
+.submenu-column ul li a {
+  text-decoration: none;
+}
+
+/* Button styles fixes */
+.btn-callback,
+.btn-login {
+  text-decoration: none;
+}
+
+.navbar a.btn-login:hover {
+  color: #fff;
+  background-color: #2a3070;
+}
+
+.navbar a.btn-callback:hover {
+  color: #fff;
+  background-color: #2a3070;
+  border-color: #2a3070;
+}
+
+.navbar a.btn-callback:hover i {
+  color: #fff;
+}
+
+/* Medium screen adjustments */
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .submenu {
+    transition: all 0.3s ease, transform 0.3s ease;
+    will-change: opacity, visibility, transform;
+  }
+  
+  .submenu-dropdown {
+    transition: all 0.3s ease, transform 0.3s ease;
+    will-change: opacity, visibility, transform;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 1199px) {
+  .menu-item > a::after {
+    bottom: 5px;
+  }
+  
+  .submenu-item > a i {
+    transition: transform 0.3s ease;
+  }
+  
+  .submenu-item.active > a i {
+    transform: rotate(90deg);
+  }
+  
+  /* Remove vertical lines */
+  .navbar .menu-item::before,
+  .navbar .menu-item::after,
+  .navbar .nav-menu::before,
+  .navbar .nav-menu::after,
+  .navbar .submenu::before,
+  .navbar .submenu::after,
+  .navbar .submenu-dropdown::before,
+  .navbar .submenu-dropdown::after {
+    display: none;
+  }
+} 

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <!-- Person searching with magnifying glass -->
+  
+  <!-- Head -->
+  <circle cx="120" cy="70" r="30" fill="#ffdbac" stroke="#f0c096" stroke-width="2"/>
+  
+  <!-- Hair -->
+  <path d="M90 70 Q110 40, 150 65 L145 75 Q120 55, 95 80 Z" fill="#593c27" stroke="#593c27" stroke-width="0.5"/>
+  
+  <!-- Face details -->
+  <ellipse cx="110" cy="65" rx="3" ry="4" fill="#333"/>
+  <ellipse cx="130" cy="65" rx="3" ry="4" fill="#333"/>
+  <path d="M115 85 Q120 90, 125 85" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+  <path d="M105 60 Q110 58, 115 60" fill="none" stroke="#333" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M125 60 Q130 58, 135 60" fill="none" stroke="#333" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M110 75 L130 75" fill="none" stroke="#f0c096" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Scratching head gesture -->
+  <path d="M150 70 Q170 60, 153 40" fill="none" stroke="#ffdbac" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Torso -->
+  <path d="M100 100 L100 160 Q120 170, 140 160 L140 100 Z" fill="#2a50a2" stroke="#1a3080" stroke-width="2"/>
+  
+  <!-- Left arm with magnifying glass -->
+  <path d="M100 110 Q70 115, 60 150" fill="none" stroke="#2a50a2" stroke-width="12" stroke-linecap="round"/>
+  
+  <!-- Magnifying glass -->
+  <circle cx="50" cy="160" r="20" fill="none" stroke="#333" stroke-width="3"/>
+  <line x1="65" y1="170" x2="85" y2="190" stroke="#333" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="50" cy="160" r="15" fill="#e8f4fc" opacity="0.5"/>
+  
+  <!-- Legs -->
+  <path d="M110 160 L105 210" fill="none" stroke="#1a3080" stroke-width="15" stroke-linecap="round"/>
+  <path d="M130 160 L135 210" fill="none" stroke="#1a3080" stroke-width="15" stroke-linecap="round"/>
+  
+  <!-- Shoes -->
+  <ellipse cx="100" cy="215" rx="15" ry="7" fill="#333" stroke="#222" stroke-width="1"/>
+  <ellipse cx="140" cy="215" rx="15" ry="7" fill="#333" stroke="#222" stroke-width="1"/>
+  
+  <!-- Question mark above head -->
+  <g transform="translate(160, 30) scale(0.8)">
+    <path d="M10 30 Q10 15, 25 15 Q40 15, 40 30 Q40 45, 25 45 L25 60" fill="none" stroke="#333" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="25" cy="75" r="3" fill="#333"/>
+  </g>
+  
+  <!-- More question marks -->
+  <g transform="translate(80, 20) scale(0.5)">
+    <path d="M10 30 Q10 15, 25 15 Q40 15, 40 30 Q40 45, 25 45 L25 60" fill="none" stroke="#333" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="25" cy="75" r="3" fill="#333"/>
+  </g>
+  
+  <g transform="translate(180, 70) scale(0.4)">
+    <path d="M10 30 Q10 15, 25 15 Q40 15, 40 30 Q40 45, 25 45 L25 60" fill="none" stroke="#333" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="25" cy="75" r="3" fill="#333"/>
+  </g>
+</svg> 

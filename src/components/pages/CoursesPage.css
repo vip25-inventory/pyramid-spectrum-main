@@ -1,0 +1,2633 @@
+/* Base styles for the courses page */
+.courses-page {
+  padding: 0;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.courses-page .container {
+  max-width: 1200px;
+  padding: 20px;
+}
+
+/* Typography styles with increased specificity */
+html body .courses-page h1,
+html body .courses-home h1,
+html body .neet-courses h1,
+html body .jee-courses h1,
+html body .foundation-courses h1,
+html body .all-courses h1 {
+  color: #333;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Class for black text in headings */
+.text-black {
+  color: #000;
+}
+
+/* Class for blue text in headings */
+.text-blue {
+  color: #2a50a2;
+}
+
+/* Class for orange text in headings - for Pyramid */
+.pyramid-page .text-black {
+  color: #000;
+}
+/* .pyramid-page{
+  background: rgba(248, 147, 31, 0.1);
+} */
+
+.pyramid-page .text-primary,
+.pyramid-page h2,
+.pyramid-page h3,
+.pyramid-page .text-blue {
+  color: #f8931f !important;
+}
+
+/* More specific selector for black text in headings */
+html body .courses-page h2 .text-black,
+html body .courses-home h2 .text-black,
+html body .neet-courses h2 .text-black,
+html body .jee-courses h2 .text-black,
+html body .foundation-courses h2 .text-black,
+html body .all-courses h2 .text-black {
+  color: #000;
+}
+
+/* Font weight for h2 tags - ultra specific selector */
+.courses-page h2,
+.courses-home h2,
+.neet-courses h2,
+.jee-courses h2,
+.academic-courses h2,
+.foundation-courses h2,
+.all-courses h2,
+.section h2,
+.page-header h2,
+.courses-overview h2,
+.spoken-english h2,
+.handwriting-calligraphy h2,
+.personality-development h2,
+.features h2,
+.cta-section h2,
+.online-coaching h2,
+.neet-toppers-results h2,
+.explore-neet-courses h2,
+.explore-jee-courses h2,
+div.courses-page h2,
+div.container h2,
+div.section h2,
+.courses-page div h2,
+.courses-home div h2,
+.neet-courses div h2,
+.jee-courses div h2 {
+  font-weight: 800 !important;
+}
+
+/* Style properties for h2 tags */
+html body .courses-page h2,
+html body .courses-home h2,
+html body .neet-courses h2,
+html body .jee-courses h2,
+html body .foundation-courses h2,
+html body .all-courses h2 {
+  color: #2a50a2;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Font weight for h3 tags - ultra specific selector */
+.courses-page h3,
+.courses-home h3,
+.neet-courses h3,
+.jee-courses h3,
+.academic-courses h3,
+.foundation-courses h3,
+.all-courses h3,
+.section h3,
+.course-category-card h3,
+.feature-item h3,
+.level-box h3,
+.modules-list h3,
+.feature-list h3,
+.course-content h3,
+div.courses-page h3,
+div.container h3,
+div.section h3,
+.courses-page div h3,
+.courses-home div h3,
+.neet-courses div h3,
+.jee-courses div h3,
+.feature-item div h3 {
+  font-weight: 700 !important;
+}
+
+/* Style properties for h3 tags */
+html body .courses-page h3,
+html body .courses-home h3,
+html body .neet-courses h3,
+html body .jee-courses h3,
+html body .foundation-courses h3,
+html body .all-courses h3 {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+html body .courses-page p,
+html body .courses-home p,
+html body .neet-courses p,
+html body .jee-courses p,
+html body .foundation-courses p,
+html body .all-courses p {
+  color: #494A4A;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.page-header {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+html body .courses-page .page-header h1 {
+  color: #333;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+html body .courses-page .page-header p {
+  color: #494A4A;
+  font-size: 0.9rem;
+  max-width: none;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section {
+  margin-bottom: 1.5rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  position: relative;
+}
+
+/* Remove background white color and box-shadow from sections */
+.section.features,
+.section.why-choose-us,
+.section.course-categories {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* 4. Remove background white color and box-shadow from "Our Academic Programs" section */
+.section.courses-overview {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* Remove background white color and box-shadow from Smart Tuition section */
+.section.smart-tuition {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* Academic Programs Section */
+.section.academic-programs {
+  background-color: transparent;
+  box-shadow: none;
+  margin-bottom: 2rem;
+}
+
+.academic-program-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.academic-program-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.program-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #f0f4ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  color: #2a50a2;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+/* Pyramid specific overrides for program icon */
+.pyramid-page .program-icon {
+  background-color: #f8931f;
+  color: black;
+}
+
+.academic-program-card:hover .program-icon {
+  background-color: black;
+  color: #f8931f;
+}
+
+.academic-spectrum-card:hover .program-icon {
+  background-color: red;
+  color: green;
+}
+
+/* Pyramid specific overrides for hovering program icon */
+.pyramid-page .academic-program-card:hover .program-icon {
+  background-color: black;
+  color: #f8931f;
+}
+
+.academic-program-card h3 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.academic-program-card p {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.program-features {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  list-style: none;
+}
+
+.program-features li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.program-features li:before {
+  content: "\f058"; /* FontAwesome check-circle icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: #2a50a2;
+}
+
+/* Pyramid specific override for check icons in lists */
+.pyramid-page .program-features li:before {
+  color: #f8931f;
+}
+
+/* Media queries for academic programs */
+@media (max-width: 992px) {
+  .academic-program-card {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .academic-program-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .program-features li {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .academic-program-card {
+    margin-bottom: 1rem;
+  }
+  
+  .program-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+  }
+}
+
+/* Remove background white color and box-shadow from "Personality Development Courses" section */
+.section.personality-development {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* Personality Development course cards styling */
+.pd-course-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.pd-course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.pd-course-card .icon-wrapper {
+  margin-bottom: 1rem;
+}
+
+.pd-course-card .course-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #f0f4ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  color: #2a50a2;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+/* Pyramid specific overrides for course icon */
+.pyramid-page .pd-course-card .course-icon {
+  background-color: #f8931f;
+  color: black;
+}
+
+.pyramid-page .pd-course-card .course-icon:hover {
+  background-color: black;
+  color: #f8931f;
+}
+
+.pd-course-card:hover .course-icon {
+  background-color: #2a50a2;
+  color: #fff;
+}
+
+/* Pyramid specific overrides for hovering course icon */
+.pyramid-page .pd-course-card:hover .course-icon {
+  background-color: black;
+  color: #f8931f;
+}
+
+.pd-course-card h3 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.pd-course-card p {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 992px) {
+  .pd-course-card {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .pd-course-card h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .pd-course-card {
+    margin-bottom: 1rem;
+  }
+  
+  .pd-course-card .course-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+  }
+}
+
+/* Apply background image to spoken-english section */
+.section.spoken-english {
+  position: relative;
+  z-index: 1;
+}
+
+/* Add background image with opacity using pseudo-element */
+.section.spoken-english::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../../public/images/vector.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3; /* Adjust opacity here - 0.3 = 30% opacity */
+  z-index: -1;
+}
+
+/* Ensure text content is readable when on the background image */
+.section.spoken-english h2,
+.section.spoken-english p,
+.section.spoken-english h3 {
+  position: relative;
+  z-index: 2;
+}
+
+/* 2. Add border-top to Basic English, Advanced English, and Practical English cards */
+.section.spoken-english .level-box {
+  border-top: 5px solid #2a50a2;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Pyramid specific override for level box border */
+.pyramid-page .section.spoken-english .level-box {
+  border-top: 5px solid #f8931f;
+}
+
+/* Spoken English page override for level box border */
+.spoken-english-page .section.spoken-english .level-box {
+  border-top: 5px solid #f8931f;
+}
+
+/* 3. Add border-left to Program Features card */
+.section.spoken-english .feature-list {
+  border-left: 5px solid #2a50a2;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Pyramid specific override for feature list border */
+.pyramid-page .section.spoken-english .feature-list {
+  border-left: 5px solid #f8931f;
+}
+
+/* Spoken English page override for feature list border */
+.spoken-english-page .section.spoken-english .feature-list {
+  border-left: 5px solid #f8931f;
+}
+
+/* Make the feature-cta have a semi-transparent background as well */
+.section.spoken-english .feature-cta {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+html body .courses-page .section h2 {
+  color: #2a50a2;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+html body .courses-page .section h2:after {
+  display: none;
+  content: none;
+}
+
+.section-intro {
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Course Category Cards */
+.course-category-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  height: 100%;
+  transition: all 0.2s ease;
+}
+
+.course-category-card:hover {
+  transform: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+html body .courses-page .course-category-icon {
+  font-size: 1.75rem;
+  color: #2a50a2;
+  margin-bottom: 1rem;
+}
+
+/* Custom styles for course type display */
+html body .courses-page .course-category-icon.d-flex {
+  font-size: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+}
+
+html body .courses-page .course-category-icon.d-flex i {
+  font-size: 1rem;
+}
+
+html body .courses-page .course-category-icon.d-flex .badge {
+  font-size: 0.7rem;
+  padding: 0.25rem 0.5rem;
+}
+
+/* Course type badge styling */
+html body .courses-page .course-type-badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  padding: 0.35rem 0.75rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+html body .courses-page .course-type-badge i {
+  font-size: 0.9rem;
+  margin-right: 0.5rem;
+}
+
+html body .courses-page .course-type-badge.live {
+  background-color: rgba(13, 110, 253, 0.1);
+  color: #0d6efd;
+  border: 1px solid rgba(13, 110, 253, 0.2);
+}
+
+html body .courses-page .course-type-badge.test-series {
+  background-color: rgba(25, 135, 84, 0.1);
+  color: #198754;
+  border: 1px solid rgba(25, 135, 84, 0.2);
+}
+
+html body .courses-page .course-type-badge.recorded {
+  background-color: rgba(255, 193, 7, 0.1);
+  color: #ffc107;
+  border: 1px solid rgba(255, 193, 7, 0.2);
+}
+
+html body .courses-page .course-type-badge span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+html body .courses-page .course-category-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.course-category-card p {
+  color: #494A4A;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.course-features {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.course-features ul {
+  padding-left: 0;
+  list-style: none;
+  color: #6c757d;
+  font-size: 0.9rem;
+  max-width: 80%;
+  text-align: left;
+}
+
+.course-features li {
+  position: relative;
+  padding-left: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #494A4A;
+}
+
+.course-features li:before {
+  content: "\f058"; /* FontAwesome check-circle icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: #2a50a2;
+}
+
+/* Pyramid specific override for check icons in lists */
+.pyramid-page .course-features li:before {
+  color: #f8931f;
+}
+
+/* Spoken English page override for check icons in lists */
+.spoken-english-page .course-features li:before {
+  color: #f8931f;
+}
+
+.pyramid-page .section .accordion-button,
+.pyramid-page .section .accordion-button:not(.collapsed) {
+  color: #f8931f;
+}
+
+.pyramid-page .accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(248, 147, 31, 0.25);
+}
+
+.pyramid-page .section.cta-section {
+  background-color: #fff6e8;
+}
+
+/* Ensure buttons remain unchanged in Pyramid page */
+.pyramid-page .btn-primary,
+.pyramid-page .btn-outline-primary {
+  /* Keep button colors unchanged as requested */
+  background-color: #2a50a2;
+  border-color: #2a50a2;
+}
+
+.pyramid-page .btn-primary:hover,
+.pyramid-page .btn-outline-primary:hover {
+  background-color: #2a3070;
+  border-color: #2a3070;
+}
+
+html body .courses-page .btn-outline-primary {
+  color: #2a50a2;
+  border-color: #2a50a2;
+}
+
+html body .courses-page .btn-outline-primary:hover {
+  background-color: #2a3070;
+  color: white;
+}
+
+/* Course Cards */
+.course-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  height: 100%;
+  transition: all 0.2s ease;
+}
+
+.course-card:hover {
+  transform: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.course-img {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.course-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-radius: 8px 8px 0 0;
+}
+
+.course-card:hover .course-img img {
+  transform: none;
+}
+
+.course-content {
+  padding: 1.5rem;
+}
+
+.course-content h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.course-details {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.course-details span {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+}
+
+.course-content p {
+  color: #494A4A;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Feature Items */
+.feature-item {
+  text-align: center;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  height: 100%;
+}
+
+html body .courses-page .feature-icon {
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  color: #2a50a2;
+}
+
+html body .courses-page .feature-item h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.feature-item p {
+  color: #494A4A;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* Program levels */
+.program-levels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.level-box {
+  flex: 1;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.level-box:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.level-box h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.level-box p {
+  color: #494A4A;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* Feature list */
+.feature-list {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  height: 100%;
+}
+
+.feature-list h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.feature-list ul {
+  padding-left: 0;
+  list-style: none;
+  color: #494A4A;
+  font-size: 0.9rem;
+}
+
+.feature-list li {
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #494A4A;
+}
+
+.feature-list li:before {
+  content: "\f058"; /* FontAwesome check-circle icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: #2a50a2;
+}
+
+/* Pyramid specific override for feature list icons */
+.pyramid-page .feature-list li:before {
+  color: #f8931f;
+}
+
+/* Spoken English page override for feature list icons */
+.spoken-english-page .feature-list li:before {
+  color: #f8931f;
+}
+
+/* Modules list */
+.modules-list {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  height: 100%;
+}
+
+.modules-list h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.modules-list ul {
+  padding-left: 0;
+  list-style: none;
+  color: #494A4A;
+  font-size: 0.9rem;
+}
+
+.modules-list li {
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #494A4A;
+}
+
+.modules-list li:before {
+  content: "\f058"; /* FontAwesome check-circle icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: #2a50a2;
+}
+
+/* Pyramid specific override for feature list icons */
+.pyramid-page .modules-list li:before {
+  color: #f8931f;
+}
+
+/* Spoken English page override for feature list icons */
+.spoken-english-page .modules-list li:before {
+  color: #f8931f;
+}
+
+/* Audience box */
+.audience-box {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  height: 100%;
+}
+
+.audience-box h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.audience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.audience-tag {
+  background: #f8f9fa;
+  color: #2a50a2;
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* CTA section styling */
+.cta-section {
+  background-color: #f0f4ff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-content {
+  text-align: center;
+}
+
+.cta-content h2 {
+  color: #2a50a2;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.cta-content p {
+  color: #494A4A;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+  background-color: #2a50a2;
+  border-color: #2a50a2;
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #2a3070;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Request Callback Section */
+.request-callback {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.request-callback h2 {
+  color: #2a50a2;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  text-align: left;
+}
+
+.request-callback p {
+  color: #494A4A;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .mode-card {
+    flex-direction: column;
+  }
+  
+  .mode-icon {
+    margin-bottom: 1rem;
+  }
+  
+  .mode-content {
+    padding-left: 0;
+  }
+  
+  .request-callback .btn {
+    float: none;
+    margin-top: 1rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-header {
+    padding: 1.25rem;
+  }
+  
+  .page-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .section {
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-item, .course-category-card, .course-card {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .courses-page .page-header h1,
+  .courses-home .page-header h1,
+  .neet-courses .page-header h1,
+  .jee-courses .page-header h1,
+  .foundation-courses .page-header h1,
+  .all-courses .page-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .courses-page .section h2,
+  .courses-home .section h2,
+  .neet-courses .section h2,
+  .jee-courses .section h2,
+  .foundation-courses .section h2,
+  .all-courses .section h2 {
+    font-size: 1.25rem;
+  }
+  
+  .courses-page .container,
+  .courses-home .container,
+  .neet-courses .container,
+  .jee-courses .container,
+  .foundation-courses .container,
+  .all-courses .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* Feature CTA */
+.feature-cta {
+  border-radius: 8px;
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Level icons */
+.level-icon {
+  font-size: 1.75rem;
+  color: #2a50a2;
+  margin-bottom: 1rem;
+}
+
+/* Pyramid specific override for level icon color */
+.pyramid-page .level-icon,
+.pyramid-page .level-icon i {
+  color: #f8931f;
+}
+
+/* Spoken English page override for level icon color */
+.spoken-english-page .level-icon,
+.spoken-english-page .level-icon i {
+  color: #f8931f;
+}
+
+.courses-page .text-primary {
+  color: #2a50a2;
+}
+
+/* Course color variations */
+.jee-courses .border-primary {
+  border-color: #25a244;
+}
+
+.neet-courses .border-primary {
+  border-color: #294e9e; /* Use more specific selector to override Bootstrap's styles */
+}
+
+.advanced-courses .border-primary {
+  border-color: #294e9e;
+}
+
+/* Shared styles for consistent spacing */
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+/* Row gutters */
+.g-4 {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 1.5rem;
+}
+
+.g-0 {
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+}
+
+/* Responsive fixes */
+@media (max-width: 991px) {
+  .course-category-card, .level-box, .feature-list, .audience-box, .feature-cta {
+    margin-bottom: 1rem;
+  }
+  
+  .row.g-4 {
+    --bs-gutter-y: 1rem;
+  }
+  
+  .level-box {
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .audience-box .audience-tags {
+    justify-content: center;
+  }
+  
+  .audience-box .btn {
+    width: 100%;
+  }
+  
+  .feature-cta .btn {
+    width: 100%;
+  }
+  
+  .mb-md-0 {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .level-box, .feature-list, .audience-box, .feature-cta {
+    padding: 1rem;
+  }
+  
+  .feature-cta {
+    margin-top: 1rem;
+  }
+}
+
+/* Online Coaching Section Styles */
+.neet-courses .section.online-coaching h2,
+.jee-courses .section.online-coaching h2 {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.online-coaching h2 span {
+  color: #28a745;
+}
+
+.online-coaching p {
+  color: #494A4A;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.online-coaching .fw-bold {
+  color: #2a50a2;
+}
+
+.trophy-icon, .award-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(13, 110, 253, 0.05);
+  border-radius: 50%;
+  font-size: 1.25rem;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.online-coaching-image img {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.online-coaching .btn-outline-primary {
+  border-width: 2px;
+  font-weight: 500;
+  padding: 8px 20px;
+}
+
+.online-coaching .btn-primary {
+  background-color: #1565C0;
+  border-color: #1565C0;
+  font-weight: 500;
+  padding: 8px 20px;
+}
+
+.online-coaching .btn-outline-primary:hover {
+  background-color: #2a3070;
+  color: white;
+}
+
+.online-coaching .btn-primary:hover {
+  background-color: #2a3070;
+  color: white;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 991px) {
+  .online-coaching h2 {
+    text-align: left;
+    margin-bottom: 1.25rem;
+  }
+  
+  .online-coaching-content {
+    margin-bottom: 2rem;
+  }
+  
+  .online-coaching .d-flex.mt-4 {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .online-coaching .d-flex:not(.mt-4) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .trophy-icon, .award-icon {
+    margin-bottom: 0.75rem;
+    margin-right: 0;
+  }
+  
+  .online-coaching p {
+    text-align: center;
+  }
+}
+
+/* NEET Toppers and Results Section Styles */
+.neet-toppers-results {
+  padding: 2rem;
+}
+
+.neet-toppers-results h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.text-success {
+  color: #28a745;
+}
+
+.text-primary {
+  color: #2a50a2 !important;
+}
+
+/* Toppers Section */
+.toppers-container {
+  height: 100%;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.toppers-gallery {
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 0.5rem;
+}
+
+.topper-profile {
+  position: relative;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0.5rem;
+}
+
+.topper-badge {
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2a50a2;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  z-index: 1;
+}
+
+.topper-image {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #2a50a2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topper-profile.center .topper-image {
+  width: 120px;
+  height: 120px;
+}
+
+.topper-profile.side .topper-image {
+  width: 90px;
+  height: 90px;
+}
+
+.topper-profile.side-lowered {
+  margin-top: 20px;
+  padding-bottom: 5px;
+}
+
+.topper-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.topper-profile h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  color: #333;
+  white-space: nowrap;
+  width: 100%;
+  text-align: center;
+}
+
+/* Results Statistics Section */
+.results-container {
+  height: 100%;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.result-stat-card {
+  background-color: #fff;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 8px;
+  border-left: 4px solid;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.result-stat-card h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.result-stat-card p {
+  font-size: 0.9rem;
+  color: #494A4A;
+  margin-bottom: 0;
+}
+
+.border-success {
+  border-color: #25a244;
+}
+
+.border-primary {
+  border-color: #294e9e;
+}
+
+.fs-1 {
+  font-size: 2.5rem;
+}
+
+/* Override Bootstrap's border-primary color for result-stat-card */
+html body .courses-page .result-stat-card.border-primary {
+  border-color: #294e9e; /* More specific selector instead of !important */
+}
+
+/* Responsive styles for Toppers and Results Section */
+@media (max-width: 992px) {
+  .neet-toppers-results h2 {
+    text-align: center;
+  }
+  
+  .toppers-container, .results-container {
+    margin-bottom: 1.5rem;
+  }
+  
+  .toppers-gallery {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .toppers-gallery {
+    justify-content: center;
+  }
+  
+  .topper-profile {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .topper-profile {
+    margin-bottom: 2rem;
+  }
+  
+  .topper-profile.center .topper-image {
+    width: 110px;
+    height: 110px;
+  }
+  
+  .topper-profile.side .topper-image {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .result-stat-card {
+    margin-bottom: 1rem;
+  }
+  
+  .neet-toppers-results {
+    padding: 1rem;
+  }
+}
+
+/* Course Feature Cards */
+html body .courses-page .course-feature-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  height: 100%;
+  transition: all 0.2s ease;
+}
+
+html body .courses-page .course-feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+html body .courses-page .course-feature-icon {
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  color: #2a50a2;
+}
+
+html body .courses-page .course-feature-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+html body .courses-page .course-feature-card p {
+  color: #494A4A;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Benefits Section */
+html body .courses-page .benefits-section {
+  padding: 4rem 0;
+  background-color: #f8f9fa;
+}
+
+html body .courses-page .benefit-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+html body .courses-page .benefit-icon {
+  font-size: 1.5rem;
+  color: #2a50a2;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+html body .courses-page .benefit-content h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+html body .courses-page .benefit-content p {
+  color: #494A4A;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  html body .courses-page .course-category-card h3 {
+    font-size: 0.9rem;
+  }
+  
+  html body .courses-page .course-feature-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  html body .courses-page .benefit-content h4 {
+    font-size: 1rem;
+  }
+}
+
+/* Course Type Filter */
+html body .courses-page .course-filter-wrapper {
+  margin-bottom: 2rem;
+}
+
+html body .courses-page .course-filter-btn {
+  padding: 0.5rem 1.25rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 50px;
+  background-color: #f1f3f5;
+  color: #495057;
+  font-weight: 500;
+  font-size: 0.85rem;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+html body .courses-page .course-filter-btn:hover {
+  background-color: #2a3070;
+  color: white;
+}
+
+html body .courses-page .course-filter-btn.active {
+  background-color: #2a50a2;
+  color: white;
+}
+
+/* Course tiles list */
+html body .courses-page .course-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+/* English Course Cards */
+.english-course-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-top: 4px solid #2a50a2;
+}
+
+.english-course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.course-level-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(42, 80, 162, 0.1);
+  margin: 0 auto;
+}
+
+.course-level-icon i {
+  font-size: 24px;
+  color: #2a50a2;
+}
+
+.english-course-card h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #2a50a2;
+  font-weight: 600;
+}
+
+.course-highlights ul {
+  list-style-type: none;
+  padding-left: 1rem;
+}
+
+.course-highlights ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+.course-highlights ul li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #2a50a2;
+}
+
+/* Program Features Section */
+.feature-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-top: 5px solid transparent;
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.12);
+  border-top: 5px solid #2a50a2;
+}
+
+/* Spoken English page override for feature card hover */
+.spoken-english-page .feature-card:hover {
+  border-top: 5px solid #f8931f;
+  box-shadow: 0 8px 15px rgba(248, 147, 31, 0.2);
+}
+
+/* Pyramid page override for feature card hover */
+.pyramid-page .feature-card:hover {
+  border-top: 5px solid #f8931f;
+  box-shadow: 0 8px 15px rgba(248, 147, 31, 0.2);
+}
+
+.feature-icon {
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  color: #2a50a2;
+}
+
+.feature-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.feature-card p {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+/* Course Pages Styling */
+.course-description {
+  margin-bottom: 3rem;
+}
+
+.course-description h2 {
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.course-benefits {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.course-benefits li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.75rem;
+  color: #444;
+}
+
+.course-benefits li::before {
+  content: "\f058";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #2a50a2;
+}
+
+.course-detail-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.course-detail-item i {
+  color: #2a50a2;
+  font-size: 1.1rem;
+  margin-right: 0.75rem;
+}
+
+.course-image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Curriculum Accordion */
+.curriculum-accordion {
+  margin-top: 1.5rem;
+}
+
+.accordion-button {
+  color: #f18f20 !important;
+  font-weight: 600;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #f18f20;
+  color: white !important;
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(42, 80, 162, 0.25);
+  background-color: #f18f20;
+  color: white !important;
+}
+
+.module-topics {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.module-topics li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+.module-topics li::before {
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #2a50a2;
+}
+
+/* CTA Section for English Courses */
+.cta-section .cta-content {
+  border-radius: 10px;
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+.cta-section .cta-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.cta-section .cta-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+.english-enroll-btn {
+  font-size: 1.1rem;
+  padding: 0.75rem 2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .course-description h2 {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+  
+  .course-image {
+    margin-top: 2rem;
+  }
+  
+  .cta-section .cta-content {
+    padding: 2rem 1rem;
+  }
+  
+  .cta-section .cta-content h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .english-course-card,
+  .feature-card {
+    padding: 1.5rem;
+  }
+  
+  .course-detail-item {
+    justify-content: center;
+  }
+}
+
+/* New styles for course categories */
+.category-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  height: 100%;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+  border-top: 5px solid transparent;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Add specific hover styles for spectrum and pyramid cards */
+.spectrum-card:hover {
+  border-top: 5px solid #2a50a2;
+  box-shadow: 0 8px 25px rgba(42, 80, 162, 0.1);
+}
+
+.pyramid-card:hover {
+  border-top: 5px solid #f8931f;
+  box-shadow: 0 8px 25px rgba(248, 147, 31, 0.1);
+}
+
+.category-header {
+  margin-bottom: 1.5rem;
+}
+
+.category-icon {
+  font-size: 2.5rem;
+  color: #2a50a2;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  transition: all 0.3s ease;
+}
+
+.spectrum-card .category-icon {
+  color: #2a50a2;
+  background-color: rgba(42, 80, 162, 0.1);
+}
+
+.pyramid-card .category-icon {
+  color: black;
+  /* background-color: rgba(248, 147, 31, 0.1); */
+  background-color: #f8931f;
+}
+
+.category-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.category-content {
+  margin-bottom: 0.5rem;
+}
+
+.category-content p {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.category-features {
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  list-style: none;
+}
+
+.category-features li {
+  position: relative;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.category-features li:before {
+  content: "✓";
+  color: #2a50a2;
+  position: absolute;
+  left: -1.5rem;
+  font-weight: bold;
+}
+
+.pyramid-card .category-features li:before {
+  color: #f8931f;
+}
+
+.category-footer {
+  padding-top: 0;
+  margin-top: 0 !important;
+}
+
+/* Spectrum page styles */
+.spectrum-page .course-highlight-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  height: 100%;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.spectrum-page .course-highlight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.spectrum-page .course-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #e6f0ff;
+  color: #2a50a1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.spectrum-page .course-highlight-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #2a50a1;
+}
+
+.spectrum-page .course-features {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.spectrum-page .course-features li {
+  position: relative;
+  padding-left: 25px;
+  font-size: 15px;
+}
+
+.spectrum-page .course-features li:before {
+  content: '\f058';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: #2a50a1;
+}
+
+.spectrum-page .course-actions {
+  margin-top: auto;
+  text-align: center;
+}
+
+.spectrum-page .benefit-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 25px;
+  height: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.spectrum-page .benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.spectrum-page .benefit-icon {
+  width: 70px;
+  height: 70px;
+  background-color: #f5f9ff;
+  color: #2a50a1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin: 0 auto 20px;
+}
+
+.spectrum-page .benefit-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* Feature box styles */
+.feature-box {
+  padding: 1.5rem;
+  text-align: center;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  transition: transform 0.3s, box-shadow 0.3s, border-top 0.3s;
+  border-top: 5px solid transparent;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(92, 107, 192, 0.2);
+  border-top: 5px solid #2a50a2;
+  background-image: url('../../../public/images/vector.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: soft-light;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Pyramid specific override for feature box hover */
+.pyramid-page .feature-box:hover {
+  border-top: 5px solid #f8931f;
+  box-shadow: 0 5px 15px rgba(248, 147, 31, 0.2);
+}
+
+/* Spoken English page override for feature box hover */
+.spoken-english-page .feature-box:hover {
+  border-top: 5px solid #f8931f;
+  box-shadow: 0 5px 15px rgba(248, 147, 31, 0.2);
+}
+
+.feature-icon {
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  color: #2a50a2;
+}
+
+/* Pyramid specific override for feature icon */
+.pyramid-page .feature-icon {
+  color: #f8931f;
+}
+
+.feature-box h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* Testimonial card styles */
+.testimonial-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-text {
+  margin-bottom: 20px;
+  position: relative;
+  padding-top: 10px;
+}
+
+.testimonial-text:before {
+  content: '\f10d';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 24px;
+  color: #e6e6e6;
+  position: absolute;
+  top: -15px;
+  left: -5px;
+}
+
+.testimonial-text p {
+  font-style: italic;
+  color: #555;
+  line-height: 1.6;
+}
+
+.testimonial-author h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.testimonial-author p {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-bottom: 0;
+}
+
+/* Importance of Spoken English Section */
+.importance-english {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.importance-english h2 {
+  margin-bottom: 1.5rem;
+}
+
+.importance-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 1.25rem;
+  transition: all 0.3s ease;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  border-left: 5px solid #2a50a2;
+}
+
+/* Pyramid specific override for importance card */
+.pyramid-page .importance-card {
+  border-left: 5px solid #f8931f;
+}
+
+.importance-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.importance-number {
+  width: 45px;
+  height: 45px;
+  background-color: #2a50a2;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* Pyramid specific override for importance number */
+.pyramid-page .importance-number {
+  background-color: #f8931f;
+}
+
+.importance-content {
+  flex-grow: 1;
+}
+
+.importance-content h3 {
+  color: #2a50a2;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* Pyramid specific override for importance content heading */
+.pyramid-page .importance-content h3 {
+  color: #f8931f;
+}
+
+.importance-content p {
+  color: #4a4a4a;
+  font-size: 0.85rem;
+  margin-bottom: 0;
+}
+
+.importance-icon {
+  width: 45px;
+  height: 45px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: #2a50a2;
+  flex-shrink: 0;
+}
+
+/* Pyramid specific override for importance icon */
+.pyramid-page .importance-icon {
+  color: #f8931f;
+}
+
+.importance-contact-btn {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  border-left: 5px solid #2a50a2;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  width: 100%;
+  height: 100%;
+}
+
+/* Pyramid specific override for importance contact button */
+.pyramid-page .importance-contact-btn {
+  border-left: 5px solid #f8931f;
+}
+
+.importance-contact-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.importance-contact-btn h3 {
+  color: #2a50a2;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Pyramid specific override for importance contact button heading */
+.pyramid-page .importance-contact-btn h3 {
+  color: #f8931f;
+}
+
+.cta-section {
+  background-color: #f5f9ff;
+  border-radius: 8px;
+  padding: 40px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.cta-content h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.cta-content p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 25px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.cta-primary {
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Responsive styles */
+@media (max-width: 991px) {
+  .category-card {
+    padding: 20px;
+  }
+  
+  .category-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+  
+  .category-card h3 {
+    font-size: 20px;
+  }
+  
+  .testimonial-card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .cta-section {
+    padding: 30px 20px;
+  }
+  
+  .cta-content h2 {
+    font-size: 24px;
+  }
+  
+  .feature-box {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .category-card {
+    margin-bottom: 20px;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+  }
+  
+  .spectrum-page .course-highlight-card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .importance-card {
+    padding: 1.25rem;
+  }
+  
+  .importance-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+  
+  .importance-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .importance-content h3 {
+    font-size: 0.9rem;
+  }
+  
+  .importance-content p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .importance-card {
+    padding: 1rem;
+  }
+  
+  .importance-number {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+  
+  .importance-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+}
+
+/* Pyramid specific override for check icons in lists */
+.pyramid-page .course-features li:before,
+.pyramid-page .category-features li:before,
+.pyramid-page .program-features li:before,
+.pyramid-page .module-topics li:before,
+.pyramid-page .curriculum-list li:before,
+.pyramid-page .modules-list li:before,
+.pyramid-page .course-benefits li::before {
+  color: #f8931f;
+}
+
+/* Additional Pyramid page color overrides */
+/* .spoken-english-page {
+  background: rgba(248, 147, 31, 0.1);
+} */
+
+.spoken-english-page .text-primary,
+.spoken-english-page h2,
+.spoken-english-page h3,
+.spoken-english-page .text-blue {
+  color: #f8931f !important;
+}
+
+.spoken-english-page .program-icon {
+  background-color: rgba(248, 147, 31, 0.1);
+  color: #f8931f;
+}
+
+.spoken-english-page .academic-program-card:hover .program-icon {
+  background-color: #f8931f;
+  color: #fff;
+}
+
+.spoken-english-page .program-features li:before {
+  color: #f8931f;
+}
+
+.spoken-english-page .feature-icon {
+  color: #f8931f;
+}
+
+.spoken-english-page .importance-card {
+  border-left: 5px solid #f8931f;
+}
+
+.spoken-english-page .importance-number {
+  background-color: #f8931f;
+}
+
+.spoken-english-page .importance-content h3 {
+  color: #f8931f;
+}
+
+.spoken-english-page .importance-icon {
+  color: black;
+  background-color: #f8931f;
+}
+
+.spoken-english-page .importance-contact-btn {
+  border-left: 5px solid #f8931f;
+}
+
+.spoken-english-page .importance-contact-btn h3 {
+  color: #f8931f;
+}
+
+.spoken-english-page .course-features li:before,
+.spoken-english-page .category-features li:before,
+.spoken-english-page .program-features li:before,
+.spoken-english-page .module-topics li:before,
+.spoken-english-page .curriculum-list li:before,
+.spoken-english-page .modules-list li:before {
+  color: #f8931f;
+}
+
+.spoken-english-page .feature-box:hover {
+  border-top: 5px solid #f8931f;
+  box-shadow: 0 5px 15px rgba(248, 147, 31, 0.2);
+}
+
+.spoken-english-page .pd-course-card .course-icon {
+  background-color: rgba(248, 147, 31, 0.1);
+  color: #f8931f;
+}
+
+.spoken-english-page .pd-course-card:hover .course-icon {
+  background-color: #f8931f;
+  color: black;
+}
+
+.spoken-english-page .section .accordion-button,
+.spoken-english-page .section .accordion-button:not(.collapsed) {
+  color: #f8931f;
+}
+
+.spoken-english-page .accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(248, 147, 31, 0.25);
+}
+
+.spoken-english-page .section.cta-section {
+  background-color: rgba(248, 147, 31, 0.1);
+}
+
+.spoken-english-page .course-features li:before {
+  color: #f8931f;
+}
+
+/* Additional overrides for Spoken English page elements */
+.spoken-english-page .course-level-icon {
+  /* background-color: rgba(248, 147, 31, 0.1); */
+  background-color: #f8931f;
+}
+
+.spoken-english-page .course-level-icon i {
+  color: black !important;
+}
+
+
+.spoken-english-page .english-course-card {
+  border-top: 4px solid #f8931f;
+}
+
+.spoken-english-page .english-course-card h3 {
+  color: #f8931f;
+}
+
+.spoken-english-page .course-highlights ul li::before {
+  color: #f8931f;
+}
+
+.spoken-english-page .feature-card .feature-icon {
+  color: #f8931f;
+}
+
+/* Override button styles but keep original colors as mentioned in pyramid page comment */
+.spoken-english-page .btn-primary,
+.spoken-english-page .btn-outline-primary {
+  /* Keep button colors unchanged as requested for Pyramid page */
+  background-color: #2a50a2;
+  border-color: #2a50a2;
+}
+
+.spoken-english-page .btn-primary:hover,
+.spoken-english-page .btn-outline-primary:hover {
+  background-color: #2a3070;
+  border-color: #2a3070;
+}
+
+.spoken-english-page .btn-outline-primary {
+  color: #2a50a2;
+  border-color: #2a50a2;
+}
+
+/* Add rule for feature-card feature-icon in pyramid-page class */
+.pyramid-page .feature-card .feature-icon {
+  color: #f8931f;
+}
+
+/* Pyramid specific override for check icons in lists */
+.pyramid-page .course-features li:before,
+.pyramid-page .category-features li:before,
+.pyramid-page .program-features li:before,
+.pyramid-page .module-topics li:before,
+.pyramid-page .curriculum-list li:before,
+.pyramid-page .modules-list li:before,
+.pyramid-page .course-benefits li::before {
+  color: #f8931f;
+}
+
+.pyramid-page .course-benefits li::before {
+  color: #f8931f;
+}
+
+/* Ensure orange bullets for course-benefits lists in English course pages */
+.spoken-english-page .course-benefits li::before {
+  content: "\f058";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #f8931f !important;
+} 

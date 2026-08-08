@@ -1,0 +1,357 @@
+/* Base styles for the about page */
+.about-page {
+  padding: 0;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.about-page .container {
+  max-width: 1200px;
+  padding: 20px;
+}
+
+/* Typography styles */
+.about-page h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.about-page h2 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #2a50a2;
+  margin-bottom: 1rem;
+}
+
+.about-page h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.75rem;
+}
+
+.about-page p {
+  font-size: 0.9rem;
+  color: #494A4A;
+  line-height: 1.5;
+}
+
+/* Section styles - card-based layout */
+.section {
+  margin-bottom: 1.5rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  position: relative;
+}
+
+/* Remove background and box-shadow from why-spectrum section */
+.about-page .why-spectrum.section {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* Add override for why-pyramid-spectrum section */
+.about-page .why-pyramid-spectrum.section {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* Remove background and box-shadow from about-overview section */
+.about-page .about-overview.section {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* Remove background and box-shadow from mission-vision section to match about-overview */
+.about-page .mission-vision.section {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* Apply the same styles as why-spectrum to achievements section */
+.about-page .achievements.section {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* Change background color for our-locations section */
+.about-page .our-locations.section {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* Remove background from Parents' trusted partner section */
+.about-page .parents-partner.section {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* Remove background from Success is a journey section */
+.about-page .success-journey.section {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.page-header {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+html body .about-page .page-header h1 {
+  text-align: center;
+}
+
+html body .about-page .page-header p {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Remove the section divider lines */
+.section:after {
+  display: none;
+}
+
+/* About and Vision cards - new styling for the redesigned sections */
+.about-card, .vision-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  height: 100%;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-card {
+  border-left: 5px solid #2a50a2;
+}
+
+.vision-card {
+  border-right: 5px solid #f8931f;
+}
+
+.about-card:hover, .vision-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-card h2, .vision-card h2 {
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.about-card h2:after, .vision-card h2:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+}
+
+.about-card h2:after {
+  background-color: #2a50a2;
+}
+
+.vision-card h2:after {
+  background-color: #f8931f;
+}
+
+/* About cards responsive adjustments */
+@media (max-width: 991px) {
+  .about-card, .vision-card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Location card - existing styles */
+.location-card, .info-card, .stat-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+  height: 100%;
+}
+
+/* Add bottom-left border to location cards */
+.location-card {
+  border-left: 5px solid #2a50a2;
+}
+
+.location-card:hover, .info-card:hover {
+  transform: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Stats styling with the same hover effects as feature-item */
+.stat-card {
+  text-align: center;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  transition: transform 0.3s, box-shadow 0.3s, border-top 0.3s;
+  border-top: 5px solid transparent;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(92, 107, 192, 0.2);
+  border-top: 5px solid #2a50a2;
+  background-image: url('../../../public/images/vector.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: soft-light;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Stats and metrics styling */
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #494A4A;
+}
+
+/* Feature items - Updated with new hover animation similar to Home.tsx */
+.feature-item {
+  padding: 1.5rem;
+  text-align: center;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  transition: transform 0.3s, box-shadow 0.3s, border-top 0.3s;
+  border-top: 5px solid transparent;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(92, 107, 192, 0.2);
+  border-top: 5px solid #2a50a2;
+  background-image: url('../../../public/images/vector.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: soft-light;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.feature-icon {
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  color: #2a50a2;
+}
+
+/* Image container */
+.image-container {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.image-container img {
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+}
+
+.image-container:hover img {
+  transform: none;
+}
+
+/* CTA section styling */
+.cta-section {
+  background-color: #f0f4ff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+}
+
+.cta-content {
+  padding: 0;
+}
+
+.cta-content .btn-primary {
+  background-color: #2a50a2;
+  border-color: #2a50a2;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.875rem;
+  border-radius: 4px;
+}
+
+.cta-content .btn-primary:hover {
+  background-color: #2a3070;
+  border-color: #2a3070;
+}
+
+/* Remove section title decorative elements */
+.about-page .section h2:after {
+  display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .stat-value {
+    font-size: 1.75rem;
+  }
+  
+  .stat-label {
+    font-size: 0.85rem;
+  }
+  
+  .about-page .section {
+    margin-bottom: 1rem;
+  }
+  
+  .location-card, .info-card, .feature-item {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-page .page-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .about-page .section h2 {
+    font-size: 1.25rem;
+  }
+  
+  .stat-value {
+    font-size: 1.5rem;
+  }
+  
+  .stat-label {
+    font-size: 0.8rem;
+  }
+  
+  .about-page .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* Other About page specific styles can be added here */ 
+
+/* Text justification for about page content */
+.about-page .text-justify {
+  text-align: justify;
+  hyphens: auto;
+} 

@@ -1,0 +1,15 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /login
+Disallow: /dashboard
+Disallow: /api/
+Disallow: /temp/
+
+# Crawl delay to prevent server overload
+Crawl-delay: 5
+
+# Sitemap location
+Sitemap: https://www.spectrum-education.com/sitemap.xml

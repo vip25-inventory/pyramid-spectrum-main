@@ -1,0 +1,79 @@
+/* Custom Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(92, 107, 192, 0.9); /* Using SPECTRUM's blue color */
+  border-radius: 50%;
+  opacity: 0.8;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 15px;
+}
+
+.carousel-control-prev {
+  left: 0;
+}
+
+.carousel-control-next {
+  right: 0;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(92, 107, 192, 1);
+  opacity: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 20px;
+  height: 20px;
+  filter: none; /* Remove default filter */
+}
+
+/* Change carousel position to static for specific sections - using more specific selectors */
+html body .testimonials .testimonials-carousel .carousel,
+html body .section.testimonials .testimonials-carousel .carousel {
+  position: static;
+}
+
+/* Make the carousel inner container relative to maintain child positioning - using more specific selectors */
+html body .testimonials .testimonials-carousel .carousel-inner,
+html body .section.testimonials .testimonials-carousel .carousel-inner {
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+/* Make the controls responsive */
+@media (max-width: 768px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 35px;
+    height: 35px;
+    margin: 0 8px;
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 15px;
+    height: 15px;
+  }
+} 

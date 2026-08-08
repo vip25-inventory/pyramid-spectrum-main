@@ -1,0 +1,994 @@
+.site-header {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 15px 0;
+  transition: all 0.3s ease;
+}
+
+/* Add glassy background when scrolled */
+.site-header.scrolled {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  max-height: 60px;
+}
+
+.logo-divider {
+  height: 40px;
+  width: 1px;
+  background-color: #2a3070;
+  margin: 0 12px;
+  display: inline-block;
+  vertical-align: middle;
+  opacity: 0.7;
+}
+
+@media (max-width: 576px) {
+  .logo-divider {
+    height: 30px;
+    margin: 0 8px;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-text {
+  color: #2a3070;
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.letter-spacing-pyramid {
+  letter-spacing: 5.5px;
+}
+
+.logo-text-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+}
+
+.logo-subtitle {
+  /* color: #ff8800; */
+  color:#2a3070;
+  font-size: 12px;
+  font-weight: 900;
+  margin-top: -5px;
+  margin-left: 1.5px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.logo-year {
+  /* color: #ff8800; */
+  color:#2a3070;
+  font-size: 11px;
+  font-weight: 900;
+  margin-top: -3px;
+  line-height: 16px;
+  margin-left: 30px;
+  text-transform: uppercase;
+}
+
+.main-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item {
+  position: relative;
+  margin: 0 15px;
+}
+
+.menu-item > a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s;
+  padding: 10px 0;
+  display: block;
+}
+
+.menu-item > a:hover,
+.menu-item:hover > a {
+  color: var(--primary-color);
+}
+
+/* Registration Button Styles */
+.highlight-item {
+  margin-left: 15px;
+}
+
+.btn-register {
+  background-color: #2a50a2;
+  color: #fff !important;
+  padding: 8px 15px !important;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #2a50a2;
+}
+
+.btn-register:hover {
+  background-color: #1e3a7d;
+  color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(42, 80, 162, 0.3);
+}
+
+/* Mobile styles for registration button */
+@media (max-width: 991px) {
+  .highlight-item {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .btn-register {
+    display: flex;
+    width: 100%;
+    margin: 0 15px;
+    padding: 10px !important;
+    justify-content: center;
+  }
+}
+
+.has-submenu {
+  position: relative;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  width: max-content; /* Expand to fit longest item */
+  min-width: 200px; /* Sensible minimum */
+  padding: 10px 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 100;
+  max-width: none !important;
+  flex-shrink: 0;
+}
+
+.has-submenu:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* New submenu styles to match screenshots */
+.submenu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.submenu-item {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.submenu-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -10px;
+  width: 20px;
+  height: 100%;
+  background-color: transparent;
+  z-index: 99;
+}
+
+.submenu-item > a {
+  display: flex;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background-color 0.2s;
+}
+
+.submenu-item > a:hover {
+  background-color: #f5f5f5;
+  color: var(--primary-color);
+}
+
+.submenu-item > a i {
+  margin-left: 10px;
+  font-size: 12px;
+  color: #888;
+  flex-shrink: 0;
+}
+
+.submenu-dropdown {
+  position: absolute;
+  top: 0;
+  left: calc(100% + 8px);
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  width: max-content; /* Expand to fit longest item */
+  min-width: 200px; /* Sensible minimum */
+  padding: 10px 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease 0.15s, visibility 0.4s ease 0.15s, transform 0.25s ease;
+  z-index: 101;
+  max-width: none !important;
+  flex-shrink: 0;
+  transform: translateX(-5px);
+}
+
+.submenu-item:hover .submenu-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  transition-delay: 0s;
+}
+
+.submenu-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.submenu-dropdown ul li {
+  margin: 0;
+}
+
+.submenu-dropdown ul li a {
+  display: block;
+  padding: 8px 15px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background-color 0.2s;
+}
+
+.submenu-dropdown ul li a:hover {
+  background-color: #f5f5f5;
+  color: var(--primary-color);
+}
+
+.submenu-arrow {
+  margin-left: 5px;
+  font-size: 10px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.btn-callback,
+.btn-login {
+  display: inline-block;
+  padding: 8px 15px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: all 0.3s;
+  margin-left: 10px;
+}
+
+.btn-callback {
+  background-color: #fff;
+  color: #2a50a1;
+  border: 1px solid #2a50a1;
+  transition: all 0.3s ease;
+}
+
+.btn-callback i {
+  color: #2a50a1;
+  transition: color 0.3s ease;
+}
+
+.btn-callback img {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) saturate(100%) invert(24%) sepia(58%) saturate(1242%) hue-rotate(197deg) brightness(95%) contrast(89%);
+  transition: filter 0.3s ease;
+}
+
+.btn-login {
+  background-color: #2a50a1;
+  color: #fff;
+}
+
+.btn-callback:hover {
+  background-color: #2a3070;
+  color: #fff;
+  border-color: #2a3070;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(42, 48, 112, 0.2);
+}
+
+.btn-callback:hover i,
+.btn-callback:hover img {
+  color: #fff;
+  filter: brightness(0) invert(1);
+}
+
+.btn-login:hover {
+  background-color: #2a3070;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.btn-callback i.fas.fa-phone {
+  transform: rotate(90deg);
+  display: inline-block;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  padding: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.mobile-menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  margin: 3px 0;
+}
+
+/* Responsive styles */
+@media (max-width: 1399px) and (min-width: 1200px) {
+  .submenu {
+    width: 200px;
+  }
+  
+  .menu-item:nth-last-child(-n+2) .submenu {
+    right: 0;
+    left: auto;
+  }
+}
+
+@media (max-width: 1199px) {
+  .submenu {
+    width: 180px;
+  }
+  
+  .menu-item {
+    margin: 0 10px;
+  }
+  
+  .menu-item:nth-last-child(-n+2) .submenu {
+    right: 0;
+    left: auto;
+  }
+
+  .submenu-dropdown {
+    width: 160px;
+  }
+  
+  /* Mobile menu toggle - enable at 1199px */
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .main-navigation {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+    overflow-y: auto;
+  }
+  
+  .main-navigation.show {
+    transform: translateX(0);
+  }
+  
+  .nav-menu {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .menu-item {
+    margin: 8px 0;
+    width: 100%;
+  }
+  
+  .menu-item > a {
+    padding: 10px 0;
+    font-size: 18px;
+  }
+  
+  .submenu {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    box-shadow: none;
+    padding: 0 0 0 20px;
+    margin-top: 0;
+    border-radius: 0;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .submenu.active {
+    max-height: 1000px;
+    padding: 10px 0 10px 20px;
+    border-left: 2px solid var(--primary-color);
+    margin: 5px 0;
+  }
+  
+  .submenu-item > a {
+    padding: 8px 10px;
+  }
+  
+  /* ====== SUBMENU DROPDOWN STYLING - MOBILE ====== */
+  /* Base state for all submenu dropdowns - collapsed */
+  .submenu-dropdown {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    transform: none;
+    border-left: 0;
+  }
+  
+  /* Expanded state applied only when active class is present */
+  .submenu-item.active > .submenu-dropdown {
+    max-height: 500px;
+    padding: 5px 0 5px 20px;
+    border-left: 2px solid #ff8800;
+    margin: 5px 0 5px 10px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Ensure nested active dropdowns maintain styling */
+  .submenu-item.active > .submenu-dropdown .submenu-item.active > .submenu-dropdown {
+    max-height: 500px;
+    padding: 5px 0 5px 20px;
+    border-left: 2px solid #ff8800;
+    margin: 5px 0;
+  }
+  
+  /* Ensure non-active dropdowns have no space */
+  .submenu-item:not(.active) > .submenu-dropdown,
+  .submenu-dropdown .submenu-item:not(.active) > .submenu-dropdown {
+    max-height: 0;
+    padding: 0;
+    margin: 0;
+    border-left: 0;
+    overflow: hidden;
+  }
+  
+  /* Remove spacing between list items */
+  .submenu-dropdown > ul > li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .submenu-dropdown > ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style for direct links (without dropdown) */
+  .submenu-dropdown > ul > li.menu-direct-link {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .submenu-dropdown > ul > li.menu-direct-link > a {
+    padding: 8px 10px;
+    display: block;
+  }
+  
+  /* Style for all submenu dropdown links */
+  .submenu-dropdown ul li a {
+    padding: 8px 10px;
+    display: block;
+  }
+  
+  /* ====== SUBMENU DROPDOWN STYLING - END ====== */
+  
+  .has-submenu {
+    position: relative;
+  }
+  
+  .has-submenu > a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .has-submenu > a::after {
+    content: '\f107';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+  }
+  
+  .has-submenu.active > a::after {
+    transform: rotate(180deg);
+  }
+  
+  .header-actions {
+    display: none !important;
+  }
+  
+  .mobile-header-actions {
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .mobile-header-actions .btn-callback,
+  .mobile-header-actions .btn-login {
+    flex: 1;
+    margin: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 15px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .mobile-header-actions .btn-callback {
+    background-color: #fff;
+    color: #2a50a1;
+    border: 1px solid #2a50a1;
+  }
+  
+  .mobile-header-actions .btn-login {
+    background-color: #2a50a1;
+    color: #fff;
+  }
+  
+  .mobile-header-actions .btn-callback i,
+  .mobile-header-actions .btn-callback img {
+    margin-right: 8px;
+  }
+  
+  .mobile-header-actions .btn-callback img {
+    width: 18px !important;
+    height: 18px !important;
+    filter: brightness(0) saturate(100%) invert(24%) sepia(58%) saturate(1242%) hue-rotate(197deg) brightness(95%) contrast(89%);
+  }
+  
+  .mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(4px, 4px);
+  }
+  
+  .mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(4px, -4px);
+  }
+
+  .main-navigation::before,
+  .main-navigation::after {
+    display: none;
+  }
+  
+  html body .submenu::before,
+  html body .submenu::after,
+  html body .nav-menu::before,
+  html body .nav-menu::after,
+  html body .has-submenu::before,
+  html body .has-submenu::after {
+    display: none;
+  }
+  
+  html body .main-navigation .nav-menu > li > a::before,
+  html body .main-navigation .nav-menu > li > a::after,
+  html body .submenu-item > a::before,
+  html body .submenu-item > a::after,
+  html body .submenu-dropdown a::before,
+  html body .submenu-dropdown a::after {
+    display: none;
+  }
+  
+  html body .nav-menu *,
+  html body .submenu *,
+  html body .submenu-dropdown * {
+    transition: all 0.3s ease;
+  }
+  
+  .mobile-header-actions .btn-callback:hover,
+  .mobile-header-actions .btn-login:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .mobile-header-actions .btn-callback:hover i,
+  .mobile-header-actions .btn-callback:hover img {
+    transform: none;
+  }
+  
+  /* Ensure mobile header actions are visible */
+  .mobile-header-actions {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  /* Make buttons more visible on smaller screens */
+  .mobile-header-actions .btn-callback,
+  .mobile-header-actions .btn-login {
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+  
+  /* Fix for the phone icon rotation */
+  .mobile-header-actions .btn-callback i.fas.fa-phone {
+    transform: rotate(90deg);
+    display: inline-block;
+    margin-right: 8px;
+  }
+  
+  /* Hover effects */
+  .mobile-header-actions .btn-callback:hover {
+    background-color: #f0f5ff;
+    color: #2a50a1;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(42, 80, 161, 0.2);
+  }
+  
+  .mobile-header-actions .btn-login:hover {
+    background-color: #2a3070;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(42, 48, 112, 0.2);
+  }
+  
+  /* Prevent submenu from closing when clicking on child elements */
+  .submenu-dropdown .submenu-item,
+  .submenu-dropdown .submenu-item a {
+    position: relative; 
+    z-index: 5;
+  }
+  
+  /* Fix for chevron rotation in mobile submenu */
+  .submenu-item > a i.fas.fa-chevron-right {
+    transition: transform 0.3s ease;
+  }
+  
+  .submenu-item.active > a i.fas.fa-chevron-right {
+    transform: rotate(90deg);
+  }
+}
+
+@media (max-width: 1024px) {
+  /* Styles specific to 1024px and below, but not in mobile menu mode */
+}
+
+@media (max-width: 991px) {
+  .site-header {
+    padding: 10px 0;
+  }
+
+  .site-header.scrolled {
+    padding: 8px 0;
+  }
+  
+  .logo img {
+    max-height: 45px;
+  }
+  
+  .logo-text {
+    font-size: 20px;
+  }
+  
+  .logo-subtitle {
+    font-size: 10px;
+    margin-top: -3px;
+  }
+  
+  .logo-year {
+    font-size: 9px;
+    margin-left: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .site-header {
+    padding: 8px 0;
+  }
+  
+  .logo img {
+    max-height: 40px;
+  }
+  
+  .logo-text {
+    font-size: 18px;
+  }
+  
+  .logo-subtitle {
+    font-size: 9px;
+    margin-top: -2px;
+    line-height: 12px;
+  }
+  
+  .logo-year {
+    font-size: 8px;
+    margin-top: -1px;
+    line-height: 10px;
+  }
+  
+  .main-navigation {
+    top: 60px;
+    height: calc(100vh - 60px);
+    padding: 15px;
+  }
+  
+  .menu-item > a {
+    padding: 12px 0;
+  }
+  
+  .submenu-column h4 {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .submenu-column ul li a {
+    font-size: 13px;
+  }
+  
+  .mobile-header-actions {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+    padding-top: 15px;
+  }
+  
+  .mobile-header-actions .btn-callback,
+  .mobile-header-actions .btn-login {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    justify-content: center;
+    font-size: 14px;
+  }
+  
+  .mobile-header-actions .btn-callback img,
+  .mobile-header-actions .btn-callback i {
+    margin-right: 5px;
+  }
+}
+
+/* Dropdown fixed width utilities */
+.fixed-width-container {
+  width: auto; /* Let content define width */
+  white-space: nowrap; /* Prevent text wrapping */
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.submenu-item > a span {
+  white-space: nowrap; /* Prevent text wrapping */
+  vertical-align: middle;
+}
+
+/* Ensure proper fixed width for submenu-dropdown */
+.submenu-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure content doesn't affect container width */
+.submenu-list,
+.submenu-dropdown ul {
+  width: 100%;
+}
+
+/* Special handling for longer items like "Spoken English" */
+.submenu-item > a[href="/courses/pyramid/english"] {
+  display: flex;
+  align-items: center;
+}
+
+.submenu-item > a[href="/courses/pyramid/english"] .fixed-width-container {
+  flex: 1;
+  min-width: 0;
+}
+
+.submenu-item > a[href="/courses/pyramid/english"] i {
+  position: relative;
+  top: 0;
+  margin-left: 8px;
+}
+
+/* Fix for Spoken English sub-dropdown */
+.submenu-item .submenu-dropdown {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.submenu-item:hover > .submenu-dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Ensure the Spoken English's submenu is only visible on hover */
+li.submenu-item:nth-child(1) .submenu-dropdown {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+li.submenu-item:nth-child(1):hover .submenu-dropdown {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Reset some of our previous attempts to get a clean implementation */
+.submenu-dropdown .submenu-item .submenu-dropdown {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transition: opacity 0.2s ease, visibility 0.2s ease !important;
+  transition-delay: 0.05s;
+}
+
+.submenu-dropdown .submenu-item:hover .submenu-dropdown {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transition-delay: 0s !important;
+}
+
+/* Force hide nested dropdown for non-mobile */
+@media (min-width: 1200px) {
+  /* Enhanced dropdown gap and hover effects */
+  .submenu-dropdown {
+    left: calc(100% + 10px); /* Slightly larger gap for desktop */
+    transform-origin: left center;
+    transform: translateX(-10px);
+  }
+  
+  .submenu-item:hover .submenu-dropdown {
+    transform: translateX(0);
+  }
+  
+  /* Create a bridge element using pseudo-element */
+  .submenu-dropdown::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px; /* Bridge the gap */
+    width: 10px; /* Width of bridge = size of gap */
+    height: 100%;
+    background-color: transparent;
+  }
+  
+  /* Direct targeting of the Spoken English menu structure */
+  .submenu-list > li > .submenu-dropdown > ul > li.submenu-item > .submenu-dropdown {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+  
+  .submenu-list > li > .submenu-dropdown > ul > li.submenu-item:hover > .submenu-dropdown {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+}
+
+/* Specifically targeting the Spoken English dropdown */
+.submenu-item[class*="spoken-english-courses"] .submenu-dropdown {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none;
+  transition: opacity 0.4s ease 0.2s, visibility 0.4s ease 0.2s, transform 0.25s ease;
+}
+
+.submenu-item[class*="spoken-english-courses"]:hover .submenu-dropdown {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto;
+  transition-delay: 0s;
+}
+
+/* Extra-wide bridge for nested Spoken English dropdown */
+.submenu-item[class*="spoken-english-courses"]::after {
+  width: 30px;
+  right: -15px;
+}
+
+.submenu-item[class*="spoken-english-courses"] .submenu-dropdown::before {
+  width: 15px;
+  left: -15px;
+}
+
+/* Make sure hover state works properly with transitions */
+.submenu-dropdown {
+  transition: opacity 0.4s ease 0.15s, visibility 0.4s ease 0.15s, transform 0.25s ease;
+} 

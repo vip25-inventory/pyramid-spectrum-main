@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  pyramid-spectrum:
+    build:
+      context: .
+      args:
+        - REACT_APP_MAPBOX_TOKEN=${REACT_APP_MAPBOX_TOKEN}
+    container_name: pyramid-spectrum
+    restart: unless-stopped
+    # Don't expose ports directly when using NPM
+    expose:
+      - "80"
+    networks:
+      - pyramid_net
+    environment:
+      - NODE_ENV=production
+    env_file:
+      - .env.production
+networks:
+  pyramid_net:
+    external: true
+    name: pyramid_net
+    driver: bridge

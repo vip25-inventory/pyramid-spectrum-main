@@ -1,0 +1,204 @@
+
+        .hero-band{
+          --navy: #23395D;
+          --gold: #B8860B;
+          --gold-bright: #E0A94D;
+          --blue: #3B6EA5;
+          --white: #FFFFFF;
+          --ink: #1F2430;
+          --muted: #6B7280;
+          --border: #E4E7EC;
+          --soft-gray: #F5F6F8;
+          --font-head: "Georgia", "Times New Roman", serif;
+          --grad-spectrum: linear-gradient(135deg, var(--navy), var(--blue));
+          --grad-pyramid: linear-gradient(135deg, var(--gold), var(--gold-bright));
+          background: var(--white);
+          color: var(--ink);
+        }
+
+        /* ---------- Intro ---------- */
+        .hero-band .intro{
+          padding-top: clamp(52px, 7vw, 88px);
+          padding-bottom: clamp(28px, 4vw, 44px);
+          max-width: 760px;
+        }
+        .hero-band .intro__eyebrow{
+          font-size: 12px;
+          font-weight: 600;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: var(--muted);
+          margin-bottom: 18px;
+        }
+        .hero-band .intro h1{
+          font-family: var(--font-head);
+          font-weight: 700;
+          font-size: clamp(28px, 4.4vw, 44px);
+          line-height: 1.22;
+          letter-spacing: -0.01em;
+          color: var(--navy);
+          margin-bottom: 18px;
+        }
+        .hero-band .intro h1 span{ color: var(--gold); }
+        .hero-band .intro p{
+          font-size: 16px;
+          line-height: 1.65;
+          color: var(--muted);
+        }
+
+        /* ---------- Cards wrap ---------- */
+        .hero-band .cards-wrap{
+          max-width: 1040px;
+          margin: 0 auto;
+          padding-bottom: clamp(64px, 8vw, 96px);
+        }
+
+        .hero-band .card-flip{
+          perspective: 1600px;
+          height: clamp(440px, 54vh, 500px);
+        }
+
+        .hero-band .card-inner{
+          position: relative;
+          width: 100%;
+          height: 100%;
+          transform-style: preserve-3d;
+          transition: transform 0.6s cubic-bezier(.2,.7,.3,1);
+          cursor: pointer;
+        }
+        .hero-band .card-flip.is-flipped .card-inner{ transform: rotateY(180deg); }
+
+        .hero-band .card-inner:focus-visible{
+          outline: 2px solid var(--navy);
+          outline-offset: 4px;
+        }
+
+        .hero-band .card-face{
+          position: absolute;
+          inset: 0;
+          border-radius: 12px;
+          background: var(--white);
+          border: 1px solid var(--border);
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
+          padding: clamp(28px, 3.2vw, 36px);
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
+          overflow: hidden;
+          transition: box-shadow 0.25s ease, border-color 0.25s ease;
+        }
+        .hero-band .card-back{ transform: rotateY(180deg); overflow-y: auto; }
+
+        .hero-band .card-flip:not(.is-flipped) .card-inner:hover .card-front{
+          box-shadow: 0 14px 32px rgba(35,57,93,0.12);
+        }
+
+        .hero-band .card--spectrum .card-front{ border-top: 3px solid var(--navy); }
+        .hero-band .card--spectrum .card-back{ border-top: 3px solid var(--navy); }
+        .hero-band .card--pyramid .card-front{ border-top: 3px solid var(--gold-bright); }
+        .hero-band .card--pyramid .card-back{ border-top: 3px solid var(--gold-bright); }
+
+        .hero-band .card-logo{ height: 56px; width: auto; align-self: flex-start; object-fit: contain; margin-bottom: 2px; }
+        .hero-band .card--spectrum .card-logo{ height: 50px; }
+        .hero-band .card--pyramid .card-logo{ height: 56px; }
+
+        .hero-band .face-eyebrow{
+          font-size: 11.5px;
+          font-weight: 600;
+          letter-spacing: 0.09em;
+          text-transform: uppercase;
+          color: var(--muted);
+        }
+
+        .hero-band .card-title{
+          font-family: var(--font-head);
+          font-weight: 700;
+          font-size: clamp(24px, 2.6vw, 28px);
+          letter-spacing: -0.01em;
+        }
+        .hero-band .card--spectrum .card-title{ color: var(--navy); }
+        .hero-band .card--pyramid .card-title{ color: var(--gold); }
+
+        .hero-band .card-tagline{
+          font-size: 14.5px;
+          line-height: 1.6;
+          color: var(--muted);
+          max-width: 36ch;
+        }
+
+        .hero-band .flip-hint{
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          width: fit-content;
+          padding: 12px 22px;
+          border-radius: 6px;
+          font-size: 13.5px;
+          font-weight: 600;
+          letter-spacing: 0.01em;
+          transition: filter .2s ease, background .2s ease;
+        }
+        .hero-band .flip-hint svg{ width: 15px; height: 15px; }
+        .hero-band .card--spectrum .flip-hint{ background: var(--grad-spectrum); color: var(--white); }
+        .hero-band .card--spectrum .card-inner:hover .flip-hint{ filter: brightness(1.08); }
+        .hero-band .card--pyramid .flip-hint{ background: var(--white); color: var(--gold); border: 1.5px solid var(--gold); }
+        .hero-band .card--pyramid .card-inner:hover .flip-hint{ background: #FFF8EA; }
+
+        /* Back content */
+        .hero-band .back-head h2{
+          font-family: var(--font-head);
+          font-size: 18px;
+          font-weight: 700;
+        }
+        .hero-band .card--spectrum .back-head h2{ color: var(--navy); }
+        .hero-band .card--pyramid .back-head h2{ color: var(--gold); }
+
+        .hero-band .close-btn{
+          width: 28px; height: 28px;
+          border-radius: 50%;
+          display: flex; align-items: center; justify-content: center;
+          border: 1px solid var(--border);
+          color: var(--muted);
+          flex: 0 0 auto;
+          cursor: pointer;
+        }
+        .hero-band .close-btn svg{ width: 14px; height: 14px; }
+
+        .hero-band .back-about{ font-size: 13.5px; line-height: 1.6; color: var(--muted); }
+
+        .hero-band .chip{
+          font-size: 11px;
+          font-weight: 500;
+          padding: 4px 10px;
+          border-radius: 999px;
+          border: 1px solid var(--border);
+          color: var(--ink);
+          background: var(--soft-gray);
+        }
+
+        .hero-band .back-list{ display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: var(--ink); margin: 0; }
+        .hero-band .back-list li{ gap: 9px; }
+        .hero-band .back-list li svg{ width: 15px; height: 15px; flex: 0 0 auto; margin-top: 1px; }
+        .hero-band .card--spectrum .back-list li svg{ color: var(--blue); }
+        .hero-band .card--pyramid .back-list li svg{ color: var(--gold); }
+
+        .hero-band .cta{
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          width: fit-content;
+          padding: 11px 20px;
+          border-radius: 6px;
+          font-size: 13px;
+          font-weight: 600;
+          transition: filter 0.2s ease;
+          text-decoration: none;
+        }
+        .hero-band .cta svg{ width: 14px; height: 14px; }
+        .hero-band .cta:hover{ filter: brightness(1.08); }
+        .hero-band .card--spectrum .cta{ background: var(--grad-spectrum); color: var(--white); }
+        .hero-band .card--pyramid .cta{ background: var(--grad-pyramid); color: var(--white); }
+ @media (prefers-reduced-motion: reduce){
+          .hero-band .card-inner{ transition: none; }
+        }

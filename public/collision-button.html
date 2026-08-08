@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collision Button Effect</title>
+  <style>
+    :root {
+      --btn-width: 250px;
+      --btn-height: 80px;
+      --btn-color: #2a3070; /* Deep blue/indigo color */
+    }
+
+    html, body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f5f5f5;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 2rem;
+      color: #333;
+    }
+
+    [class^="btn-"] {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      width: 100%;
+      height: var(--btn-height);
+      max-width: var(--btn-width);
+      margin: 1rem auto;
+      /* text-transform: uppercase; */
+      border: 1px solid currentColor;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    a {
+      text-decoration: none;
+      line-height: var(--btn-height);
+      color: black;
+      display: block;
+    }
+
+    .btn-11 {
+      position: relative;
+      color: var(--btn-color);
+    }
+    
+    /* The text span needs to be above the pseudo-elements */
+    .btn-11 span {
+      position: relative;
+      z-index: 1; /* This ensures text stays above the animations */
+    }
+
+    .btn-11:before,
+    .btn-11:after {
+      position: absolute;
+      top: 50%;
+      content: '';
+      width: 20px;
+      height: 20px;
+      background-color: var(--btn-color);
+      border-radius: 50%;
+      z-index: 0; /* Ensure these stay below the text */
+    }
+
+    .btn-11:before {
+      left: -20px;
+      transform: translate(-50%, -50%);
+    }
+
+    .btn-11:after {
+      right: -20px;
+      transform: translate(50%, -50%);
+    }
+
+    .btn-11:hover span {
+      color: #ffffff; /* Explicitly set the text to white on hover */
+    }
+
+    .btn-11:hover:before {
+      animation: criss-cross-left 0.8s both;
+      animation-direction: alternate;
+    }
+
+    .btn-11:hover:after {
+      animation: criss-cross-right 0.8s both;
+      animation-direction: alternate;
+    }
+
+    @keyframes criss-cross-left {
+      0% {
+        left: -20px;
+      }
+      50% {
+        left: 50%;
+        width: 20px;
+        height: 20px;
+      }
+      100% {
+        left: 50%;
+        width: calc(var(--btn-width) * 1.5);
+        height: calc(var(--btn-width) * 1.5);
+      }
+    }
+
+    @keyframes criss-cross-right {
+      0% {
+        right: -20px;
+      }
+      50% {
+        right: 50%;
+        width: 20px;
+        height: 20px;
+      }
+      100% {
+        right: 50%;
+        width: calc(var(--btn-width) * 1.5);
+        height: calc(var(--btn-width) * 1.5);
+      }
+    }
+    
+    .instructions {
+      margin-top: 2rem;
+      color: #666;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Collision Button Effect</h1>
+    <a class="btn-11" href="#"><span>Collision</span></a>
+    <p class="instructions">Hover over the button to see the effect</p>
+  </div>
+</body>
+</html>

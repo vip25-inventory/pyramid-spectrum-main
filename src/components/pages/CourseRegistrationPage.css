@@ -1,0 +1,122 @@
+/* Course Registration Page Styles */
+
+.course-registration-page {
+  padding: 0;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.course-registration-page .container {
+  max-width: 1200px;
+  padding: 20px;
+}
+
+/* Page Header and Typography styles */
+.course-registration-page .page-header {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.course-registration-page .page-header h1 {
+  color: #333;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.course-registration-page .page-header p {
+  color: #6c757d;
+  font-size: 0.9rem;
+  max-width: none;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.course-registration-page .section {
+  margin-bottom: 1.5rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  position: relative;
+}
+
+/* Google Form Wrapper */
+.google-form-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+  position: relative;
+  min-height: 500px;
+}
+
+.google-form-wrapper iframe {
+  width: 100%;
+  max-width: 100%;
+  border: none;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.google-form-wrapper iframe.loaded {
+  opacity: 1;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .google-form-wrapper iframe {
+    height: 2100px; /* Slightly taller for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .course-registration-page .page-header {
+    padding: 1.25rem;
+  }
+  
+  .course-registration-page .section {
+    padding: 1.25rem;
+  }
+  
+  .google-form-wrapper {
+    padding: 15px;
+  }
+  
+  .google-form-wrapper iframe {
+    height: 2200px; /* Taller for small screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .course-registration-page .page-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .course-registration-page .page-header p {
+    font-size: 0.85rem;
+  }
+  
+  .course-registration-page .container {
+    padding: 15px;
+  }
+  
+  .course-registration-page .section {
+    padding: 1rem;
+  }
+  
+  .google-form-wrapper {
+    padding: 10px;
+  }
+  
+  .google-form-wrapper iframe {
+    height: 2400px; /* Even taller for mobile screens */
+  }
+} 
