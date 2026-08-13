@@ -9,7 +9,7 @@
           --muted: #6B7280;
           --border: #E4E7EC;
           --soft-gray: #F5F6F8;
-          --font-head: "Georgia", "Times New Roman", serif;
+          --font-head: 'Roboto', Arial, sans-serif;
           --grad-spectrum: linear-gradient(135deg, var(--navy), var(--blue));
           --grad-pyramid: linear-gradient(135deg, var(--gold), var(--gold-bright));
           background: var(--white);
@@ -23,7 +23,7 @@
           max-width: 760px;
         }
         .hero-band .intro__eyebrow{
-          font-size: 12px;
+          font-size: 20px;
           font-weight: 600;
           letter-spacing: 0.12em;
           text-transform: uppercase;
@@ -33,15 +33,15 @@
         .hero-band .intro h1{
           font-family: var(--font-head);
           font-weight: 700;
-          font-size: clamp(28px, 4.4vw, 44px);
-          line-height: 1.22;
+          font-size: 2.3rem;
+          line-height: 1.2;
           letter-spacing: -0.01em;
           color: var(--navy);
           margin-bottom: 18px;
         }
         .hero-band .intro h1 span{ color: var(--gold); }
         .hero-band .intro p{
-          font-size: 16px;
+          font-size: 18px;
           line-height: 1.65;
           color: var(--muted);
         }

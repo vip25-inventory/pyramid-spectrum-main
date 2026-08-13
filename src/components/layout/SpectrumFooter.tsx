@@ -1,61 +1,9 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-
-import SpectrumFooter from './SpectrumFooter';
-import PyramidFooter from './PyramidFooter';
+import { Link } from 'react-router-dom';
 
 import './Footer.css';
 
-const Footer: React.FC = () => {
-
-  const location = useLocation();
-
-  const isSpectrum = location.pathname.startsWith('/spectrum');
-  const isPyramid = location.pathname.startsWith('/pyramid');
-
-  const isOriginalPage =
-    location.pathname === '/' ||
-    location.pathname.startsWith('/test-series') ||
-    location.pathname.startsWith('/results') ||
-    location.pathname.startsWith('/study-materials') ||
-    location.pathname === '/about' ||
-    location.pathname === '/contact' ||
-    location.pathname === '/course-registration' ||
-    location.pathname === '/login';
-
-  // ==========================================
-  // ORIGINAL WEBSITE
-  // ==========================================
-
-  if (isOriginalPage) {
-    return <OriginalLandingFooter />;
-  }
-
-  // ==========================================
-  // SPECTRUM
-  // ==========================================
-
-  if (isSpectrum) {
-    return <SpectrumFooter />;
-  }
-
-  // ==========================================
-  // PYRAMID
-  // ==========================================
-
-  if (isPyramid) {
-    return <PyramidFooter />;
-  }
-
-  return null;
-};
-
-
-// ==========================================
-// ORIGINAL LANDING FOOTER
-// ==========================================
-
-const OriginalLandingFooter: React.FC = () => {
+const SpectrumFooter: React.FC = () => {
   return (
     <footer className="site-footer">
 
@@ -63,32 +11,73 @@ const OriginalLandingFooter: React.FC = () => {
 
         <div className="footer-content">
 
-          {/* ==========================================
-              CONTACT / REGISTER
-              ========================================== */}
-
           <div className="footer-column">
-            <h4>Contact Us</h4>
+            <h4>About Spectrum</h4>
 
             <ul>
               <li>
-                <Link to="/contact">
-                  Contact Us
+                <Link to="/spectrum/about">
+                  About Us
                 </Link>
               </li>
 
               <li>
-                <Link to="/course-registration">
-                  Register For Course
+                <Link to="/spectrum/contact">
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                              <Link to="/spectrum/course-registration">
+                                Register For Course
+                              </Link>
+                            </li>
+            </ul>
+          </div>
+
+
+          <div className="footer-column">
+            <h4>Courses</h4>
+
+            <ul>
+              <li>
+                <Link to="/spectrum/SpectrumCoursesPage/spectrum/neet">
+                  NEET
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/spectrum/SpectrumCoursesPage/spectrum/iit-jee">
+                  IIT-JEE
                 </Link>
               </li>
             </ul>
           </div>
 
 
-          {/* ==========================================
-              SOCIAL LINKS
-              ========================================== */}
+          <div className="footer-column">
+            <h4>Resources</h4>
+
+            <ul>
+              <li>
+                <Link to="/spectrum/test-series">
+                  Test Series
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/spectrum/study-materials">
+                  Study Materials
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/spectrum/results">
+                  Results
+                </Link>
+              </li>
+            </ul>
+          </div>
+
 
           <div className="footer-column">
             <h4>Connect With Us</h4>
@@ -141,16 +130,12 @@ const OriginalLandingFooter: React.FC = () => {
         </div>
 
 
-        {/* ==========================================
-            COPYRIGHT
-            ========================================== */}
-
         <div className="footer-bottom">
 
           <div className="copyright">
 
             <p>
-              © 2025 SPECTRUM by Pyramid Academy. All rights reserved |
+              © 2025 Spectrum by Pyramid Academy. All rights reserved |
               {' '}Crafted by{' '}
 
               <a
@@ -165,6 +150,7 @@ const OriginalLandingFooter: React.FC = () => {
               >
                 Scorpion Infotech Solutions
               </a>
+
             </p>
 
           </div>
@@ -176,4 +162,5 @@ const OriginalLandingFooter: React.FC = () => {
     </footer>
   );
 };
-export default Footer;
+
+export default SpectrumFooter;

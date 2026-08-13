@@ -176,7 +176,7 @@ html body .about-page .page-header p {
 }
 
 /* Location card - existing styles */
-.location-card, .info-card, .stat-card {
+.location-card, .info-card, .arch-card {
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -196,7 +196,7 @@ html body .about-page .page-header p {
 }
 
 /* Stats styling with the same hover effects as feature-item */
-.stat-card {
+.arch-card {
   text-align: center;
   background-color: white;
   border-radius: 8px;
@@ -206,7 +206,7 @@ html body .about-page .page-header p {
   border-top: 5px solid transparent;
 }
 
-.stat-card:hover {
+.arch-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(92, 107, 192, 0.2);
   border-top: 5px solid #2a50a2;

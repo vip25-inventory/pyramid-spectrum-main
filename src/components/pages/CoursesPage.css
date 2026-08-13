@@ -68,7 +68,6 @@ html body .all-courses h2 .text-black {
 .foundation-courses h2,
 .all-courses h2,
 .section h2,
-.page-header h2,
 .courses-overview h2,
 .spoken-english h2,
 .handwriting-calligraphy h2,
@@ -88,7 +87,9 @@ div.section h2,
 .jee-courses div h2 {
   font-weight: 800 !important;
 }
-
+.page-header h2{
+font-weight: 800 !important;
+}
 /* Style properties for h2 tags */
 html body .courses-page h2,
 html body .courses-home h2,

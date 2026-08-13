@@ -1,17 +1,17 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
-import './Home.css';
-import '../common/CarouselControls.css';
+import '../Home.css';
+import '../../common/CarouselControls.css';
 import { Carousel } from 'react-bootstrap';
-import AnimatedButton from '../common/AnimatedButton';
-import CollisionButton from '../common/CollisionButton';
+import AnimatedButton from '../../common/AnimatedButton';
+import CollisionButton from '../../common/CollisionButton';
 import { useNavigate } from 'react-router-dom';
-import { getCanonicalUrl } from '../../utils/seoUtils';
+import { getCanonicalUrl } from '../../../utils/seoUtils';
 
 // Import testimonials data
-import { testimonials } from '../../data/testimonials';
+import { testimonials } from '../../../data/testimonials';
 
-const Home: React.FC = () => {
+const PyramidHome: React.FC = () => {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('online');
   const [scholarshipTab, setScholarshipTab] = useState('online');
@@ -481,9 +481,9 @@ const Home: React.FC = () => {
   return (
     <div className="home-page">
       <Helmet>
-        <title>SPECTRUM Education - Excellence in Academic & Skill Development Since 2006</title>
-        <meta name="description" content="SPECTRUM Education provides expert coaching for NEET, IIT-JEE, Olympiads with expert faculty. Also offering Spoken English, Handwriting, Calligraphy, and Personality Development courses." />
-        <meta name="keywords" content="NEET coaching, IIT-JEE preparation, Spoken English courses, handwriting classes, calligraphy, personality development, online education, SPECTRUM education" />
+        <title>PYRAMID Education - Excellence in Academic & Skill Development </title>
+        <meta name="description" content="PYRAMID Education provides expert coaching for NEET, IIT-JEE, Olympiads with expert faculty. Also offering Spoken English, Handwriting, Calligraphy, and Personality Development courses." />
+        <meta name="keywords" content="Spoken English Classes in Vellore, Best Spoken English Institute in Vellore, English Speaking Course, Communication Skills, Personality Development, Interview Training, Public Speaking." />
         <link rel="canonical" href={getCanonicalUrl("/")} />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -541,11 +541,11 @@ const Home: React.FC = () => {
             <div className="row align-items-center">
               <div className="col-lg-6">
               <h1 className="scholarship-title text-center">
-              <span className="highlight-spectrum fw-bolder">NEET</span> & <span className="highlight-spectrum fw-bolder">IIT-JEE</span> Prep with <span className="highlight-spectrum fw-bolder">Spoken English</span> Training
+              <span className="highlight-spectrum fw-bolder">Shape Your Child's Future with Board-Specific Learning.</span> 
               </h1>
               <div className="scholarship-tabs-container">
                 <p className="hero-subtitle text-center">
-                  Master subjects | Communicate with clarity | Succeed with confidence. Join now!
+                 Speak English with Confidence. Transform your communication skills with Pyramid, a dedicated Spoken English institute in Vellore. Whether you are a student, job seeker, homemaker, or working professional, our practical training helps you speak English fluently and confidently in real-life situations.
                 </p>
                   <div className="scholarship-tabs">
                     <AnimatedButton 
@@ -997,111 +997,200 @@ const Home: React.FC = () => {
           </div>
         </section>
 {/* =========================
-          WHY PARENTS CHOOSE SPECTRUM
-      ========================== */}
-      <section className="section admissions-section">
-        <div className="container">
+OUR COURSES
+========================== */}
 
-          <h2 className="section-title text-center">
-            <span className="normal-text">Why Parents Choose </span>
-            <span className="spectrum-text">Spectrum</span>
-          </h2>
+<section className="py-5">
+  <div className="container">
 
-          <div className="row">
+    <h2 className="section-title text-center">
+      <span className="normal-text">Our  </span>
+      <span className="spectrum-text">Courses</span>
+    </h2>
 
-            <div className="col-md-6 col-lg-4 mb-4">
-              <div className="feature-card h-100">
-                <div className="feature-icon">
-                  <i className="fas fa-user"></i>
-                </div>
-                <h3>Personalized Attention</h3>
-                <p>
-                  Focused support based on every student's individual learning
-                  requirements.
-                </p>
-              </div>
-            </div>
+    <div className="row">
 
-            <div className="col-md-6 col-lg-4 mb-4">
-              <div className="feature-card h-100">
-                <div className="feature-icon">
-                  <i className="fas fa-users"></i>
-                </div>
-                <h3>Small Batch Sizes</h3>
-                <p>
-                  Smaller groups allow teachers to provide better attention
-                  and interaction.
-                </p>
-              </div>
-            </div>
-
-            <div className="col-md-6 col-lg-4 mb-4">
-              <div className="feature-card h-100">
-                <div className="feature-icon">
-                  <i className="fas fa-book"></i>
-                </div>
-                <h3>Board-Specific Teaching</h3>
-                <p>
-                  Teaching is aligned with CBSE, ICSE, and State Board
-                  curricula.
-                </p>
-              </div>
-            </div>
-
-            <div className="col-md-6 col-lg-4 mb-4">
-              <div className="feature-card h-100">
-                <div className="feature-icon">
-                  <i className="fas fa-chart-bar"></i>
-                </div>
-                <h3>Regular Tests & Performance Analysis</h3>
-                <p>
-                  Continuous assessments help track academic progress and
-                  improvement.
-                </p>
-              </div>
-            </div>
-
-            <div className="col-md-6 col-lg-4 mb-4">
-              <div className="feature-card h-100">
-                <div className="feature-icon">
-                  <i className="fas fa-user-tie"></i>
-                </div>
-                <h3>Experienced Subject Experts</h3>
-                <p>
-                  Expert faculty help students develop strong subject
-                  understanding.
-                </p>
-              </div>
-            </div>
-
-            <div className="col-md-6 col-lg-4 mb-4">
-              <div className="feature-card h-100">
-                <div className="feature-icon">
-                  <i className="fas fa-question-circle"></i>
-                </div>
-                <h3>Doubt-Clearing Sessions</h3>
-                <p>
-                  Dedicated sessions help students clarify difficult concepts.
-                </p>
-              </div>
-            </div>
-
-            <div className="col-md-6 col-lg-4 mb-4 mx-auto">
-              <div className="feature-card h-100">
-                <div className="feature-icon">
-                  <i className="fas fa-bell"></i>
-                </div>
-                <h3>Parent Progress Updates</h3>
-                <p>
-                  Parents receive updates about their child's academic
-                  progress.
-                </p>
-              </div>
-            </div>
-
+      <div className="col-md-6 col-lg-4 mb-4">
+        <div className="feature-card h-100">
+          <div className="feature-icon">
+            <i className="fas fa-comments"></i>
           </div>
+          <h3>Spoken English</h3>
+          <p>
+            Improve your everyday English speaking skills and communicate
+            confidently in real-life situations.
+          </p>
         </div>
-      </section>
+      </div>
+
+      <div className="col-md-6 col-lg-4 mb-4">
+        <div className="feature-card h-100">
+          <div className="feature-icon">
+            <i className="fas fa-language"></i>
+          </div>
+          <h3>Beginner to Advanced English</h3>
+          <p>
+            Structured English learning programs designed for learners
+            from beginner to advanced levels.
+          </p>
+        </div>
+      </div>
+
+      <div className="col-md-6 col-lg-4 mb-4">
+        <div className="feature-card h-100">
+          <div className="feature-icon">
+            <i className="fas fa-users"></i>
+          </div>
+          <h3>Communication Skills</h3>
+          <p>
+            Develop effective communication skills for personal,
+            academic, and professional interactions.
+          </p>
+        </div>
+      </div>
+
+      <div className="col-md-6 col-lg-4 mb-4">
+        <div className="feature-card h-100">
+          <div className="feature-icon">
+            <i className="fas fa-user"></i>
+          </div>
+          <h3>Personality Development</h3>
+          <p>
+            Build confidence, interpersonal skills, presentation skills,
+            and a positive personality.
+          </p>
+        </div>
+      </div>
+
+      <div className="col-md-6 col-lg-4 mb-4">
+        <div className="feature-card h-100">
+          <div className="feature-icon">
+            <i className="fas fa-briefcase"></i>
+          </div>
+          <h3>Interview Skills</h3>
+          <p>
+            Prepare for interviews with practical communication,
+            confidence-building, and interview practice.
+          </p>
+        </div>
+      </div>
+
+      <div className="col-md-6 col-lg-4 mb-4">
+        <div className="feature-card h-100">
+          <div className="feature-icon">
+            <i className="fas fa-microphone"></i>
+          </div>
+          <h3>Public Speaking</h3>
+          <p>
+            Improve your confidence and learn to speak clearly and
+            effectively in front of an audience.
+          </p>
+        </div>
+      </div>
+
+      <div className="col-md-6 col-lg-4 mb-4 mx-auto">
+        <div className="feature-card h-100">
+          <div className="feature-icon">
+            <i className="fas fa-building"></i>
+          </div>
+          <h3>Corporate Communication</h3>
+          <p>
+            Develop professional communication skills for meetings,
+            presentations, workplace interactions, and business situations.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+{/* =========================
+WHO CAN JOIN?
+========================== */}
+
+<section className="py-5">
+  <div className="container">
+
+    <h2 className="section-title text-center">
+      <span className="normal-text">Who Can</span>
+      <span className="pyramid-text"> Join?</span>
+    </h2>
+
+    <div className="row">
+
+      <div className="col-md-6 col-lg-4 mb-4">
+        <div className="feature-card h-100">
+          <div className="feature-icon">
+            <i className="fas fa-school"></i>
+          </div>
+          <h3>School Students</h3>
+        </div>
+      </div>
+
+      <div className="col-md-6 col-lg-4 mb-4">
+        <div className="feature-card h-100">
+          <div className="feature-icon">
+            <i className="fas fa-graduation-cap"></i>
+          </div>
+          <h3>College Students</h3>
+        </div>
+      </div>
+
+      <div className="col-md-6 col-lg-4 mb-4">
+        <div className="feature-card h-100">
+          <div className="feature-icon">
+            <i className="fas fa-user-tie"></i>
+          </div>
+          <h3>Job Seekers</h3>
+        </div>
+      </div>
+
+      <div className="col-md-6 col-lg-4 mb-4">
+        <div className="feature-card h-100">
+          <div className="feature-icon">
+            <i className="fas fa-briefcase"></i>
+          </div>
+          <h3>Working Professionals</h3>
+        </div>
+      </div>
+
+      <div className="col-md-6 col-lg-4 mb-4">
+        <div className="feature-card h-100">
+          <div className="feature-icon">
+            <i className="fas fa-home"></i>
+          </div>
+          <h3>Homemakers</h3>
+        </div>
+      </div>
+
+      <div className="col-md-6 col-lg-4 mb-4">
+        <div className="feature-card h-100">
+          <div className="feature-icon">
+            <i className="fas fa-lightbulb"></i>
+          </div>
+          <h3>Entrepreneurs</h3>
+        </div>
+      </div>
+
+      <div className="col-md-6 col-lg-4 mb-4 mx-auto">
+        <div className="feature-card h-100">
+          <div className="feature-icon">
+            <i className="fas fa-comments"></i>
+          </div>
+          <h3>Anyone Who Wants to Improve Spoken English</h3>
+        </div>
+      </div>
+
+    </div>
+
+    <div className="text-center mt-3">
+      <p className="lead">
+        Improve your spoken English for personal or professional growth.
+      </p>
+    </div>
+
+  </div>
+</section>
       {/* =========================
           SUBJECTS WE SPECIALIZE IN
       ========================== */}
@@ -1109,138 +1198,105 @@ const Home: React.FC = () => {
         <div className="container">
 
           <h2 className="section-title text-center">
-            <span className="normal-text">Subjects We </span>
-            <span className="spectrum-text">Specialize In</span>
+            <span className="normal-text">Our  </span>
+            <span className="spectrum-text">Learning Method</span>
           </h2>
 
           <p className="text-center mb-5">
-            Mathematics, Physics, Chemistry, and Biology are taught with a
-            strong focus on conceptual understanding, application, and
-            examination techniques.
+            We use activity-based learning, role plays, group discussions, presentations, one-to-one speaking practice, vocabulary building, and real-world conversations to ensure every learner gains confidence.
           </p>
 
-          <div className="row justify-content-center">
-
-            <div className="col-6 col-md-3 mb-4">
-              <div className="feature-card text-center h-100">
-                <div className="feature-icon">
-                  <i className="fas fa-calculator"></i>
-                </div>
-                <h3>Mathematics</h3>
-              </div>
-            </div>
-
-            <div className="col-6 col-md-3 mb-4">
-              <div className="feature-card text-center h-100">
-                <div className="feature-icon">
-                  <i className="fas fa-atom"></i>
-                </div>
-                <h3>Physics</h3>
-              </div>
-            </div>
-
-            <div className="col-6 col-md-3 mb-4">
-              <div className="feature-card text-center h-100">
-                <div className="feature-icon">
-                  <i className="fas fa-flask"></i>
-                </div>
-                <h3>Chemistry</h3>
-              </div>
-            </div>
-
-            <div className="col-6 col-md-3 mb-4">
-              <div className="feature-card text-center h-100">
-                <div className="feature-icon">
-                  <i className="fas fa-dna"></i>
-                </div>
-                <h3>Biology</h3>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>{/* =========================
-          BOARDS WE COVER
-      ========================== */}
-      <section className="section admissions-section">
-        <div className="container">
-
-          <h2 className="section-title text-center">
-            <span className="normal-text">Boards We </span>
-            <span className="spectrum-text">Cover</span>
-          </h2>
-
-          <div className="row justify-content-center">
-
-            <div className="col-md-4 mb-4">
-              <div className="feature-card text-center h-100">
-                <div className="feature-icon">
-                  <i className="fas fa-school"></i>
-                </div>
-                <h3>CBSE</h3>
-              </div>
-            </div>
-
-            <div className="col-md-4 mb-4">
-              <div className="feature-card text-center h-100">
-                <div className="feature-icon">
-                  <i className="fas fa-school"></i>
-                </div>
-                <h3>ICSE</h3>
-              </div>
-            </div>
-
-            <div className="col-md-4 mb-4">
-              <div className="feature-card text-center h-100">
-                <div className="feature-icon">
-                  <i className="fas fa-school"></i>
-                </div>
-                <h3>State Board (Matriculation)</h3>
-              </div>
-            </div>
-
-          </div>
         </div>
       </section>
-
       {/* =========================
-          OUR TEACHING APPROACH
-      ========================== */}
-      <section className="section why-spectrum">
-        <div className="container">
+WHY STUDENTS LOVE PYRAMID
+========================== */}
 
-          <div className="row align-items-center">
+<section className="py-5">
+  <div className="container">
 
-            <div className="col-lg-5 mb-4 mb-lg-0">
-              <div className="text-center">
-                <i
-                  className="fas fa-chalkboard-teacher spectrum-text"
-                  style={{ fontSize: '120px' }}
-                ></i>
-              </div>
-            </div>
+    <h2 className="section-title text-center">
+      <span className="normal-text">Why Students Love</span>
+      <span className="pyramid-text"> Pyramid</span>
+    </h2>
 
-            <div className="col-lg-7">
-              <h2 className="section-title">
-                <span className="normal-text">Our Teaching </span>
-                <span className="spectrum-text">Approach</span>
-              </h2>
+    <div className="row">
 
-              <p>
-                Every student learns differently. We identify strengths and
-                improvement areas through continuous assessments and provide
-                personalized guidance to help each learner perform their best.
-              </p>
-
-              <p>
-                Our approach focuses on conceptual understanding, application,
-                examination techniques, and continuous academic improvement.
-              </p>
-            </div>
-
+      <div className="col-md-6 col-lg-3 mb-4">
+        <div className="feature-card h-100">
+          <div className="feature-icon">
+            <i className="fas fa-users"></i>
           </div>
+          <h3>Small Batch Sizes</h3>
         </div>
-      </section>
+      </div>
+
+      <div className="col-md-6 col-lg-3 mb-4">
+        <div className="feature-card h-100">
+          <div className="feature-icon">
+            <i className="fas fa-user-check"></i>
+          </div>
+          <h3>Personalized Attention</h3>
+        </div>
+      </div>
+
+      <div className="col-md-6 col-lg-3 mb-4">
+        <div className="feature-card h-100">
+          <div className="feature-icon">
+            <i className="fas fa-chalkboard-teacher"></i>
+          </div>
+          <h3>Friendly Trainers</h3>
+        </div>
+      </div>
+
+      <div className="col-md-6 col-lg-3 mb-4">
+        <div className="feature-card h-100">
+          <div className="feature-icon">
+            <i className="fas fa-lightbulb"></i>
+          </div>
+          <h3>Practical Learning</h3>
+        </div>
+      </div>
+
+      <div className="col-md-6 col-lg-3 mb-4">
+        <div className="feature-card h-100">
+          <div className="feature-icon">
+            <i className="fas fa-clock"></i>
+          </div>
+          <h3>Flexible Timings</h3>
+        </div>
+      </div>
+
+      <div className="col-md-6 col-lg-3 mb-4">
+        <div className="feature-card h-100">
+          <div className="feature-icon">
+            <i className="fas fa-wallet"></i>
+          </div>
+          <h3>Affordable Fees</h3>
+        </div>
+      </div>
+
+      <div className="col-md-6 col-lg-3 mb-4">
+        <div className="feature-card h-100">
+          <div className="feature-icon">
+            <i className="fas fa-chart-line"></i>
+          </div>
+          <h3>Regular Assessments</h3>
+        </div>
+      </div>
+
+      <div className="col-md-6 col-lg-3 mb-4">
+        <div className="feature-card h-100">
+          <div className="feature-icon">
+            <i className="fas fa-certificate"></i>
+          </div>
+          <h3>Certificate on Successful Completion</h3>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
         {/* Admissions Open Section - Moved from AboutPage */}
         <section className="section admissions-section">
           <div className="container">
@@ -1310,7 +1366,7 @@ const Home: React.FC = () => {
           </div>
         </section>
 
-        {/* FAQ Section */}
+        {/* FAQ Section
         <section className="section faq">
           <div className="container">
             <h2 className="section-title text-center"><span className="faq-letter">F</span><span className="faq-text">requently </span><span className="faq-letter">A</span><span className="faq-text">sked </span><span className="faq-letter">Q</span><span className="faq-text">uestions</span></h2>
@@ -1349,10 +1405,28 @@ const Home: React.FC = () => {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
+        {/* =========================
+CALL TO ACTION
+========================== */}
+
+<section className="py-5">
+  <div className="container text-center">
+
+    <h2 className="section-title">
+      <span className="normal-text">Start Your English Learning</span>
+      <span className="pyramid-text"> Journey Today</span>
+    </h2>
+
+    <p className="lead">
+      Join Pyramid and communicate with confidence.
+    </p>
+
+  </div>
+</section>
       </div>
     </div>
   );
 };
 
-export default Home;
+export default PyramidHome;

@@ -17,12 +17,17 @@ import LoadingSpinner from './components/common/LoadingSpinner';
 import ScrollToTop from './components/common/ScrollToTop';
 import WhatsAppButton from './components/common/WhatsAppButton';
 import AdPopupWrapper from './components/common/AdPopup';
-
 // Page Components
 import LandingPage from './components/pages/LandingPage'
-import Home from './components/pages/Home';
+import SpectrumHome from './components/pages/spectrum/SpectrumHome';
+import PyramidHome from './components/pages/pyramid/PyramidHome';
+import PyramidAbout from './components/pages/pyramid/PyramidAbout';
+import SpectrumAbout from './components/pages/spectrum/SpectrumAbout';
 import CoursesPage from './components/pages/CoursesPage';
+import PyramidCourse from './components/pages/pyramid/PyramidCoursesPage';
 import TestSeriesPage from './components/pages/TestSeriesPage';
+import SpectrumTestSeries from './components/pages/spectrum/SpectrumTestSeries';
+import PyramidTestSeries from './components/pages/pyramid/PyramidTestSeries';
 import ResultsPage from './components/pages/ResultsPage';
 import StudyMaterialsPage from './components/pages/StudyMaterialsPage';
 import AboutPage from './components/pages/AboutPage';
@@ -30,9 +35,18 @@ import ContactPage from './components/pages/ContactPage';
 import Login from './components/pages/Login';
 import CourseRegistrationPage from './components/pages/CourseRegistrationPage';
 import NotFoundPage from './components/pages/NotFoundPage';
+import SpectrumCourse from './components/pages/spectrum/SpectrumCoursesPage';
+import SpectrumResults from './components/pages/spectrum/SpectrumResults';
+import SpectrumStudyPage from './components/pages/spectrum/SpectrumStudyPage';
+import PyramidResults from './components/pages/pyramid/PyramidResults';
+import PyramidStudyPage from './components/pages/pyramid/pyramidStudyPage';
+
+import PyramidContact from './components/pages/pyramid/PyramidContact';
+import SpectrumContact from './components/pages/spectrum/SpectrumContact';
 
 // Context Consumer
 import { useAppContext } from './context/AppContext';
+
 
 // App wrapped component that uses context
 const AppContent: React.FC = () => {
@@ -49,14 +63,37 @@ const AppContent: React.FC = () => {
       <main>
         <Routes>
           <Route path='/' element={<LandingPage/>}/>
-           <Route path="/spectrun" element={<Home />} /> 
-          <Route path="/courses/*" element={<CoursesPage />} />
-          <Route path="/test-series/*" element={<TestSeriesPage />} />
-          <Route path="/results/*" element={<ResultsPage />} />
-          <Route path="/study-materials/*" element={<StudyMaterialsPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/:company/about" element={<AboutPage />} />
+{/* /pyramid/about
+<Route path="/spectrum" element={<Home />} /> */}
+<Route path="/spectrum" element={<SpectrumHome />} />
+<Route path="/pyramid" element={<PyramidHome />} />
+<Route path="/pyramid/about" element={<PyramidAbout />} />
+<Route path="/spectrum/about" element={<SpectrumAbout />} />
+
+<Route
+  path="/spectrum/SpectrumCoursesPage/*"
+  element={<SpectrumCourse />}
+/>
+<Route
+  path="/pyramid/PyramidCoursesPage/*"
+  element={<PyramidCourse />}
+/>
+           {/* <Route path="/spectrun" element={<Home />} />  */}
+          {/* <Route path="/courses/*" element={<CoursesPage />} /> */}
+          <Route path="/spectrum/test-series/*" element={<SpectrumTestSeries />} />
+          <Route path="/Pyramid/test-series/*" element={<PyramidTestSeries />} />
+          
+          <Route path="/Spectrum/results/*" element={<SpectrumResults />} />
+          <Route path="/Pyramid/results/*" element={<PyramidResults />} />
+          
+          <Route path="/spectrum/study-materials/*" element={<SpectrumStudyPage />} />
+          <Route path="/pyramid/study-materials/*" element={<PyramidStudyPage />} />
+
+          <Route path="/pyramid/contact" element={<PyramidContact />} />
+          <Route path="/spectrum/contact" element={<SpectrumContact />} />
+          
           <Route path="/contact" element={<ContactPage />} />
+
           <Route path="/login" element={<Login />} />
           <Route path="/course-registration" element={<CourseRegistrationPage />} />
           <Route path="/404" element={<NotFoundPage />} />

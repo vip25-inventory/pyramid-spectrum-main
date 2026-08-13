@@ -12,7 +12,7 @@ export const companyContent: Record<string, CompanyAboutData> = {
   spectrum: {
     pageTitle: "About Spectrum",
     description:
-      "Empowering students through academic excellence and structured learning.",
+      "Spectrum was founded with the vision of providing high-quality academic coaching for students from Classes 6–12. We understand that every board has different academic expectations, and every student has a unique learning style. Our goal is to bridge learning gaps through structured teaching, personal mentoring, and continuous motivation.",
 
     story:
       "To help every student build strong fundamentals, improve analytical thinking, and achieve academic excellence through personalized coaching.",
@@ -29,7 +29,7 @@ export const companyContent: Record<string, CompanyAboutData> = {
   pyramid: {
     pageTitle: "About Pyramid",
     description:
-      "Building communication skills and professional confidence for students and working professionals.",
+      "Pyramid is a dedicated Spoken English institute committed to helping learners communicate with confidence. We believe that English is a skill that opens doors to better education, rewarding careers, and meaningful relationships. Our focus is on practical communication rather than memorising grammar rules, making learning simple, engaging, and effective.",
 
     story:
       "Pyramid focuses on spoken English, communication skills, and professional development programmes designed to help students and working professionals communicate with confidence.",

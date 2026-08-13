@@ -1,21 +1,11 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import './StudyMaterialsPage.css'; // Reusing existing styles
-import './AboutPage.css'; // New CSS file for About page specific styles
-import Breadcrumbs from '../common/Breadcrumbs';
-import AnimatedButton from '../common/AnimatedButton';
-import { getCanonicalUrl } from '../../utils/seoUtils';
-import { companyContent } from '../../data/companyContent';
+import '../AboutPage.css'; // New CSS file for About page specific styles
+import Breadcrumbs from '../../common/Breadcrumbs';
+import AnimatedButton from '../../common/AnimatedButton';
+import { getCanonicalUrl } from '../../../utils/seoUtils';
 
-const AboutPage: React.FC = () => {
-   const { company } = useParams<{ company: string }>();
-
-const content = company ? companyContent[company] : undefined;
-
-if (!content) {
-  return <div>Company not found.</div>;
-}
+const SpectrumAbout: React.FC = () => {
   return (
     <div className="about-page">
       <Helmet>
@@ -33,9 +23,9 @@ if (!content) {
         />
         
         <div className="page-header">
-          <h1>{content.pageTitle}</h1>
+          <h1>About Spectrum</h1>
           <p className="text-muted mb-0">
-             {content.description}
+           Spectrum was founded with the vision of providing high-quality academic coaching for students from Classes 6–12. We understand that every board has different academic expectations, and every student has a unique learning style. Our goal is to bridge learning gaps through structured teaching, personal mentoring, and continuous motivation.
           </p>
         </div>
         
@@ -47,7 +37,7 @@ if (!content) {
                   <span style={{ color: '#000' }}>Our</span> <span>Story</span>
                 </h2>
                 <p className="text-justify">
-               {content.story}
+                To become the most trusted tuition centre for <b style={{ color: '#2a50a2' }}>CBSE, ICSE, </b> and <b  style={{ color: '#f8931f' }}>State Board students </b> by delivering quality education and measurable academic success.
                 </p>
               </div>
             </div>
@@ -57,65 +47,97 @@ if (!content) {
                   <span style={{ color: '#000' }}>Our</span> <span>Vision</span>
                 </h2>
                 <p className="text-justify">
-                 {content.vision}
+                  To help every student build strong fundamentals, improve analytical thinking, and achieve academic excellence through personalized coaching.
                 </p>
               </div>
             </div>
           </div>
         </div>
         
-        <div className="section why-pyramid-spectrum">
+        {/*  OUR VALUES */}
+
+        <div className="section our-values">
           <h2 className="text-center">
-            <span style={{ color: '#000' }}>Why</span> Choose {content.pageTitle}?
+            <span style={{ color: '#000' }}>Our</span>{' '}
+            <span className="spectrum-text">Values</span>
           </h2>
           <div className="row">
-            <div className="col-md-4 mb-3">
+            <div className="col-md-6 col-lg-4 mb-3">
+              <div className="feature-item">
+                <div className="feature-icon">
+                  <i className="fas fa-user"></i>
+                </div>
+                <h3>Student-First Approach</h3>
+              </div>
+            </div>
+            <div className="col-md-6 col-lg-4 mb-3">
               <div className="feature-item">
                 <div className="feature-icon">
                   <i className="fas fa-star"></i>
                 </div>
-                <h3>You Dream. We Coach. You Achieve.</h3>
-                <p className="mb-0">We're committed to turning your academic dreams into reality</p>
+                <h3>Academic Excellence</h3>
               </div>
             </div>
-            <div className="col-md-4 mb-3">
+            <div className="col-md-6 col-lg-4 mb-3">
               <div className="feature-item">
                 <div className="feature-icon">
                   <i className="fas fa-user-friends"></i>
                 </div>
-                <h3>Personalized Attention</h3>
-                <p className="mb-0">Individual focus that brings out your best academic performance</p>
+                <h3>Individual Attention</h3>
               </div>
             </div>
-            <div className="col-md-4 mb-3">
+            <div className="col-md-6 col-lg-4 mb-3">
               <div className="feature-item">
                 <div className="feature-icon">
-                  <i className="fas fa-chalkboard-teacher"></i>
+                  <i className="fas fa-handshake"></i>
                 </div>
-                <h3>Supportive Mentors</h3>
-                <p className="mb-0">Our educators believe in your potential to succeed</p>
+                <h3>Integrity</h3>
               </div>
             </div>
-            <div className="col-md-6 mb-3">
+            <div className="col-md-6 col-lg-4 mb-3">
               <div className="feature-item">
                 <div className="feature-icon">
-                  <i className="fas fa-arrow-up"></i>
+                  <i className="fas fa-chart-line"></i>
                 </div>
-                <h3>Failures Become Stepping Stones</h3>
-                <p className="mb-0">We help turn challenges into opportunities for growth</p>
-              </div>
-            </div>
-            <div className="col-md-6 mb-3">
-              <div className="feature-item">
-                <div className="feature-icon">
-                  <i className="fas fa-trophy"></i>
-                </div>
-                <h3>Confidence + Concept = Success</h3>
-                <p className="mb-0">We build both knowledge and self-belief for lasting achievement</p>
+                <h3>Continuous Improvement</h3>
               </div>
             </div>
           </div>
+
         </div>
+{/* =========================
+    WHAT MAKES SPECTRUM DIFFERENT
+========================== */}
+
+<div className="section what-makes-spectrum-different">
+
+  <h2 className="text-center">
+    <span style={{ color: '#000' }}>What Makes</span>{' '}
+    <span className="spectrum-text">Spectrum Different?</span>
+  </h2>
+
+  <div className="row justify-content-center">
+
+    <div className="col-md-10">
+      <div className="feature-item text-center">
+
+        <div className="feature-icon">
+          <i className="fas fa-graduation-cap"></i>
+        </div>
+
+        <p className="mb-0">
+          Unlike generic tuition centres, Spectrum follows board-specific
+          lesson planning, conducts regular assessments, tracks progress,
+          and provides focused support in Mathematics, Physics, Chemistry,
+          and Biology.
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
         
         {/* <div className="section why-spectrum">
           <h2 className="text-center">
@@ -266,19 +288,19 @@ if (!content) {
           </h2>
           <div className="row">
             <div className="col-md-4 mb-3">
-              <div className="stat-card">
+              <div className="arch-card">
                 <div className="stat-value">2006</div>
                 <div className="stat-label">Year Established</div>
               </div>
             </div>
             <div className="col-md-4 mb-3">
-              <div className="stat-card">
+              <div className="arch-card">
                 <div className="stat-value">12+</div>
                 <div className="stat-label">Years of Experience</div>
               </div>
             </div>
             <div className="col-md-4 mb-3">
-              <div className="stat-card">
+              <div className="arch-card">
                 <div className="stat-value">10,000+</div>
                 <div className="stat-label">Students Trained</div>
               </div>
@@ -302,4 +324,4 @@ if (!content) {
   );
 };
 
-export default AboutPage; 
+export default SpectrumAbout; 

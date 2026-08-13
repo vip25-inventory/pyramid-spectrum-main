@@ -177,7 +177,7 @@ const LandingPage: React.FC = () => {
               "Small batches with doubt-clearing sessions",
             ]}
             isFlipped={spectrumFlipped}
-             visitPath="/spectrum/about"
+            visitPath="/spectrum"
             onToggle={() => setSpectrumFlipped((v) => !v)}
           />
 
@@ -198,7 +198,7 @@ const LandingPage: React.FC = () => {
               "Foundational Programs for young learners",
             ]}
             isFlipped={pyramidFlipped}
-             visitPath="/pyramid/about"
+            visitPath="/pyramid"
             onToggle={() => setPyramidFlipped((v) => !v)}
           />
         </div>

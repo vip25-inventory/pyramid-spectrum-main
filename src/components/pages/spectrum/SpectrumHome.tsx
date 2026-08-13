@@ -1,17 +1,17 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
-import './Home.css';
-import '../common/CarouselControls.css';
+import '../Home.css';
+import '../../common/CarouselControls.css';
 import { Carousel } from 'react-bootstrap';
-import AnimatedButton from '../common/AnimatedButton';
-import CollisionButton from '../common/CollisionButton';
+import AnimatedButton from '../../common/AnimatedButton';
+import CollisionButton from '../../common/CollisionButton';
 import { useNavigate } from 'react-router-dom';
-import { getCanonicalUrl } from '../../utils/seoUtils';
+import { getCanonicalUrl } from '../../../utils/seoUtils';
 
 // Import testimonials data
-import { testimonials } from '../../data/testimonials';
+import { testimonials } from '../../../data/testimonials';
 
-const Home: React.FC = () => {
+const SpectrumHome: React.FC = () => {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('online');
   const [scholarshipTab, setScholarshipTab] = useState('online');
@@ -541,11 +541,11 @@ const Home: React.FC = () => {
             <div className="row align-items-center">
               <div className="col-lg-6">
               <h1 className="scholarship-title text-center">
-              <span className="highlight-spectrum fw-bolder">NEET</span> & <span className="highlight-spectrum fw-bolder">IIT-JEE</span> Prep with <span className="highlight-spectrum fw-bolder">Spoken English</span> Training
+              <span className="highlight-spectrum fw-bolder">Shape Your Child's Future with Board-Specific Learning.</span> 
               </h1>
               <div className="scholarship-tabs-container">
                 <p className="hero-subtitle text-center">
-                  Master subjects | Communicate with clarity | Succeed with confidence. Join now!
+                 Spectrum is a dedicated tuition centre in Vellore offering personalized coaching for CBSE, ICSE, and State Board (Matriculation) students. With expert faculty and individual attention, we help students strengthen concepts, improve confidence, and achieve outstanding academic results.
                 </p>
                   <div className="scholarship-tabs">
                     <AnimatedButton 
@@ -1350,9 +1350,26 @@ const Home: React.FC = () => {
             </div>
           </div>
         </section>
+        {/* =========================
+CALL TO ACTION
+========================== */}
+
+<section className="py-5">
+  <div className="container text-center">
+
+    <h2 className="section-title">
+      <span className="pyramid-text"> Begin Your Learning Journey Today</span>
+    </h2>
+
+    <p className="lead">
+     Give your child the academic advantage they deserve. Join Spectrum and experience board-specific coaching that builds confidence and delivers results.
+    </p>
+
+  </div>
+</section>
       </div>
     </div>
   );
 };
 
-export default Home;
+export default SpectrumHome;
