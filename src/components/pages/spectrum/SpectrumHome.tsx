@@ -1177,18 +1177,19 @@ const SpectrumHome: React.FC = () => {
                 <div className="feature-icon">
                   <i className="fas fa-school"></i>
                 </div>
-                <h3>CBSE</h3>
+                <h3>ICSE</h3>
               </div>
             </div>
-
             <div className="col-md-4 mb-4">
               <div className="feature-card text-center h-100">
                 <div className="feature-icon">
                   <i className="fas fa-school"></i>
                 </div>
-                <h3>ICSE</h3>
+                <h3>CBSE</h3>
               </div>
             </div>
+
+            
 
             <div className="col-md-4 mb-4">
               <div className="feature-card text-center h-100">

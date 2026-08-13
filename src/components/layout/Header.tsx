@@ -71,21 +71,21 @@ const OriginalLandingHeader: React.FC = () => {
           <div className="logo">
                       <Link to="/">
                         <img 
-                          src="/images/pyramid-logo.png" 
-                          alt="SPECTRUM Academy" 
-                          height="60" 
+                          src="/images/pyramid_new_logo.png" 
+                          alt="Pyramid Academy" 
+                          height="80" 
                         />
                         <div className="logo-divider"></div>
                         <img 
-                          src="/images/logo-transparent.png" 
-                          alt="SPECTRUM Academy" 
+                          src="/images/spectrum_new_logo.png" 
+                          alt="Spectrum Academy" 
                           height="60" 
                         />
-                        <div className="logo-text-container">
-                          <span className="logo-text">SPECTRUM</span>
+                        {/* <div className="logo-text-container">
+                          <span className="logo-text">SPECTRUM</span> */}
                           {/* <span className="logo-subtitle">by Pyramid Academy</span> */}
                           {/* <span className="logo-year">( since 2006 )</span> */}
-                        </div>
+                        {/* </div> */}
                       </Link>
                     </div>
 

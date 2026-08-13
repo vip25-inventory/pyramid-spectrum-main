@@ -145,15 +145,15 @@ const Header: React.FC = () => {
           <div className="logo">
             <Link to="/">
               <img 
-                src="/images/logo-transparent.png" 
+                src="/images/spectrum_new_logo.png" 
                 alt="SPECTRUM Academy" 
                 height="60" 
               />
-              <div className="logo-text-container">
-                <span className="logo-text">SPECTRUM</span>
+              {/* <div className="logo-text-container">
+                <span className="logo-text">SPECTRUM</span> */}
                 {/* <span className="logo-subtitle">by Pyramid Academy</span> */}
                 {/* <span className="logo-year">( since 2006 )</span> */}
-              </div>
+              {/* </div> */}
             </Link>
           </div>
 
@@ -184,13 +184,13 @@ const Header: React.FC = () => {
                 </a>
               </li> */}
 
-              <li className="menu-item">
+              {/* <li className="menu-item">
                 <Link to="/spectrum/test-series" onClick={handleMobileLinkClick}>Test Series</Link>
               </li>
 
               <li className="menu-item">
                 <Link to="/spectrum/results" onClick={handleMobileLinkClick}>Results</Link>
-              </li>
+              </li> */}
 
               <li className="menu-item">
                 <Link to="/spectrum/study-materials" onClick={handleMobileLinkClick}>Study Materials</Link>

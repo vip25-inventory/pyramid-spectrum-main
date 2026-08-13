@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import './LandingPage.css'
-const LOGO_SPECTRUM = "/images/logo-transparent.png";
-const LOGO_PYRAMID = "/images/pyramid-logo.png";
+const LOGO_SPECTRUM = "/images/spectrum_new_logo.png";
+const LOGO_PYRAMID = "/images/pyramid_new_logo.png";
 
 const CheckIcon = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">

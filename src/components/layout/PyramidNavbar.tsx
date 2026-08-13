@@ -145,7 +145,7 @@ const Header: React.FC = () => {
           <div className="logo">
             <Link to="/">
               <img 
-                src="/images/pyramid-logo.png" 
+                src="/images/pyramid_new_logo.png" 
                 alt="Pyramid Academy" 
                 height="60" 
               />
@@ -184,9 +184,9 @@ const Header: React.FC = () => {
                 <Link to="/pyramid/test-series" onClick={handleMobileLinkClick}>Test Series</Link>
               </li> */}
 
-              <li className="menu-item">
+              {/* <li className="menu-item">
                 <Link to="/pyramid/results" onClick={handleMobileLinkClick}>Results</Link>
-              </li>
+              </li> */}
 
               <li className="menu-item">
                 <Link to="/pyramid/study-materials" onClick={handleMobileLinkClick}>Study Materials</Link>

@@ -93,11 +93,11 @@ const PyramidFooter: React.FC = () => {
                           </Link>
                         </li>
           
-                        <li>
+                        {/* <li>
                           <Link to="/pyramid/results">
                             Results
                           </Link>
-                        </li>
+                        </li> */}
                       </ul>
                     </div>
 

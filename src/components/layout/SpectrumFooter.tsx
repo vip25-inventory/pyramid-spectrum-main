@@ -58,11 +58,11 @@ const SpectrumFooter: React.FC = () => {
             <h4>Resources</h4>
 
             <ul>
-              <li>
+              {/* <li>
                 <Link to="/spectrum/test-series">
                   Test Series
                 </Link>
-              </li>
+              </li> */}
 
               <li>
                 <Link to="/spectrum/study-materials">
@@ -70,11 +70,11 @@ const SpectrumFooter: React.FC = () => {
                 </Link>
               </li>
 
-              <li>
+              {/* <li>
                 <Link to="/spectrum/results">
                   Results
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
