@@ -16,7 +16,7 @@ import Notifications from './components/common/Notifications';
 import LoadingSpinner from './components/common/LoadingSpinner';
 import ScrollToTop from './components/common/ScrollToTop';
 import WhatsAppButton from './components/common/WhatsAppButton';
-import AdPopupWrapper from './components/common/AdPopup';
+// import AdPopupWrapper from './components/common/AdPopup';
 // Page Components
 import LandingPage from './components/pages/LandingPage'
 import SpectrumHome from './components/pages/spectrum/SpectrumHome';
@@ -102,7 +102,7 @@ const AppContent: React.FC = () => {
       </main>
       {!isLoginPage && !isNotFoundPage && <Footer />}
       <WhatsAppButton phoneNumber="917200655336" />
-      <AdPopupWrapper />
+      {/* <AdPopupWrapper /> */}
     </div>
   );
 };
